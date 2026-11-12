@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>DIGITAL PRODUK - Pelopor Produk Digital No 1 (Lush Emerald & Gold Reseller Vault)</title>
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Configuration from DESIGN.md -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#00170f",
+            "surface-dim": "#00170f",
+            "surface-bright": "#1b4032",
+            "surface-container-lowest": "#00120b",
+            "surface-container-low": "#002116",
+            "surface-container": "#00251a",
+            "surface-container-high": "#093024",
+            "surface-container-highest": "#163b2e",
+            "on-surface": "#c3ecd8",
+            "on-surface-variant": "#bbcabf",
+            "primary": "#4edea3",
+            "primary-container": "#10b981",
+            "on-primary": "#003824",
+            "secondary": "#ffca45",
+            "secondary-container": "#e4ae00",
+            "on-secondary": "#3f2e00",
+            "canvas-gradient-start": "#013827",
+            "canvas-gradient-mid-1": "#064E3B",
+            "canvas-gradient-mid-2": "#3F5509",
+            "canvas-gradient-end": "#9E7D05",
+            "header-pine": "#01291D",
+            "border-gold": "#EAB308",
+            "badge-orange-start": "#EA580C",
+            "badge-orange-end": "#F97316",
+            "tag-mint-bg": "#ECFDF5",
+            "tag-mint-text": "#047857",
+            "card-surface": "#FFFFFF",
+            "card-surface-subtle": "#F8FAFC",
+            "text-on-light-primary": "#0F172A",
+            "text-on-light-muted": "#64748B",
+            "disc-teal": "#0D9488",
+            "disc-pink": "#EC4899",
+            "disc-royal-blue": "#2563EB",
+            "disc-orange": "#F97316",
+            "disc-emerald": "#10B981",
+            "disc-purple": "#8B5CF6",
+            "disc-sky": "#0284C7",
+            "disc-red": "#EF4444"
+          },
+          fontFamily: {
+            "headline": ["Outfit", "sans-serif"],
+            "body": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* ================= THEME: DARK MODE (DEFAULT) ================= */
+    body, body.theme-dark {
+      background: linear-gradient(145deg, #013827 0%, #064e3b 35%, #182c16 70%, #06150f 100%);
+      color: #c3ecd8;
+    }
+    body.theme-dark .product-card {
+      background: #0b1f18;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #f1f5f9;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    body.theme-dark .product-card h2 {
+      color: #f8fafc;
+    }
+    body.theme-dark .product-card p {
+      color: #94a3b8;
+    }
+    body.theme-dark .card-meta-bar {
+      border-color: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+    }
+
+    /* ================= THEME: CLEAN MODE (LIGHT SLATE) ================= */
+    body.theme-clean {
+      background: #f8fafc !important;
+      color: #0f172a !important;
+    }
+    body.theme-clean .catalog-hero-title {
+      color: #0f172a !important;
+    }
+    body.theme-clean .catalog-hero-sub {
+      color: #475569 !important;
+    }
+    body.theme-clean .discovery-deck {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-color: #e2e8f0 !important;
+      box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.08) !important;
+    }
+    body.theme-clean .discovery-search-input {
+      background: #f1f5f9 !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #0f172a !important;
+    }
+    body.theme-clean .discovery-badge {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+      border-color: #e2e8f0 !important;
+    }
+    body.theme-clean .cat-pill {
+      background: #f1f5f9 !important;
+      color: #475569 !important;
+    }
+    body.theme-clean .cat-pill:hover {
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+    body.theme-clean .cat-pill.active {
+      background: #047857 !important;
+      color: #ffffff !important;
+    }
+    body.theme-clean .product-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.06) !important;
+      color: #0f172a !important;
+    }
+    body.theme-clean .product-card h2 {
+      color: #0f172a !important;
+    }
+    body.theme-clean .product-card p {
+      color: #64748b !important;
+    }
+
+    .font-headline {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Arched Header Frame */
+    .arched-header {
+      background: rgba(1, 41, 29, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid #EAB308;
+      border-bottom-left-radius: 2.25rem;
+      border-bottom-right-radius: 2.25rem;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Product Card Elevation */
+    .product-card {
+      background: #FFFFFF;
+      border-radius: 1.25rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+      transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.35);
+    }
+
+    /* 3D Pixar & Photo Visual Header (Rasio Presisi 16:9) */
+    .card-visual-header {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+      border-top-left-radius: 1.25rem;
+      border-top-right-radius: 1.25rem;
+      background: #080d1a;
+    }
+    .card-visual-header svg,
+    .card-visual-header img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .product-card:hover .card-visual-header svg,
+    .product-card:hover .card-visual-header img {
+      transform: scale(1.08);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    html {
+      scrollbar-width: none;
+    }
+
+    /* Toast Notification */
+    #toast-notification {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col selection:bg-secondary selection:text-on-secondary">
+
+  <!-- ================= TOP ARCHED HEADER & NAVIGATION ================= -->
+  <header class="fixed top-0 inset-x-0 z-50 arched-header">
+    <div class="h-28 max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-between py-2">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Brand Identity -->
+        <div class="flex items-center gap-3">
+          <div class="flex flex-col">
+            <span id="appHeaderTitle" class="font-headline text-xl sm:text-2xl font-extrabold uppercase text-white tracking-wider leading-none">
+              DIGITAL PRODUK
+            </span>
+            <span id="appHeaderSub" class="text-xs font-semibold text-secondary leading-tight mt-0.5">
+              Pelopor Produk Digital No 1
+            </span>
+          </div>
+          <!-- Reseller Badge -->
+          <div id="appHeaderBadge" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-badge-orange-start to-badge-orange-end text-white text-xs font-bold uppercase shadow-[0_0_16px_rgba(249,115,22,0.45)]">
+            <span class="material-symbols-outlined text-[16px]">verified_user</span>
+            <span>100% BISA DIJUAL KEMBALI</span>
+          </div>
+        </div>
+
+        <!-- Right Quick Actions -->
+        <div class="flex items-center gap-2">
+          <!-- Theme Toggle (Clean vs Dark) -->
+          <button 
+            id="themeToggleBtn" 
+            onclick="window.toggleTheme()" 
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-white border border-white/20 text-xs font-bold transition shadow-sm"
+            title="Ganti Mode Tampilan (Clean Mode / Dark Mode)"
+          >
+            <span id="themeToggleIcon" class="material-symbols-outlined text-[17px] text-secondary">light_mode</span>
+            <span id="themeToggleText" class="hidden sm:inline">Mode Clean</span>
+          </button>
+
+          <button onclick="window.navigateTo('view-admin')" title="Kelola Toko & Database" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary border border-border-gold/40 text-xs font-bold transition">
+            <span class="material-symbols-outlined text-[18px]">tune</span>
+            <span class="hidden md:inline">Pengaturan Toko</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (0ms Instant Client Switching) -->
+      <nav class="flex items-center gap-1 overflow-x-auto pb-1" id="navTabs">
+        <button onclick="window.navigateTo('view-katalog')" data-target="view-katalog" class="nav-tab active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition">
+          Katalog Produk (Hub)
+        </button>
+        <button onclick="window.navigateTo('view-lisensi')" data-target="view-lisensi" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap">
+          Lisensi & Panduan Reseller
+        </button>
+        <button onclick="window.navigateTo('view-admin')" data-target="view-admin" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap">
+          Admin Manager (Sheet Sync)
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="w-full pt-32 max-w-7xl mx-auto px-4 sm:px-6 min-h-screen pb-24 flex-1">
+
+    <!-- ================= VIEW 1: KATALOG PRODUK (HUB) ================= -->
+    <section id="view-katalog" class="flex flex-col w-full">
+      <!-- Hero 3D Pixar Showcase Banner (Sampul Depan) -->
+      <div id="heroBannerContainer" class="relative w-full rounded-3xl overflow-hidden mb-6 border border-white/15 shadow-2xl bg-gradient-to-r from-emerald-950 via-[#01291D] to-slate-950 flex flex-col md:flex-row items-center">
+        <div class="p-6 sm:p-8 flex-1 z-10">
+          <div class="flex items-center justify-between gap-3 mb-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">stars</span>
+              <span id="heroBadgeText">PROMO RESELLER VAULT 2026 • 100% PROFIT ANDA</span>
+            </div>
+            <!-- Quick Edit Hero Button -->
+            <button onclick="window.openHeroModal()" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition backdrop-blur-md border border-white/20 shadow-sm" title="Edit Isi & Gambar Banner Hero">
+              <span class="material-symbols-outlined text-[15px] text-secondary">edit</span>
+              <span>Edit Banner</span>
+            </button>
+          </div>
+          <h1 id="heroTitleText" class="font-headline text-2xl sm:text-4xl font-extrabold text-white uppercase tracking-tight leading-tight">
+            Koleksi Aset Digital Premium Siap Jual
+          </h1>
+          <p id="heroDescText" class="text-xs sm:text-sm text-slate-200 mt-2 max-w-xl leading-relaxed">
+            Akses instan ribuan materi siap edar, template komersial, materi anak, dan modul coding dengan hak cipta PLR/MRR legalitas penuh untuk monetisasi digital Anda.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 mt-4">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-white text-xs font-bold border border-white/10">
+              <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span id="heroTag1Text">12 Bundel Eksklusif</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-secondary text-xs font-bold border border-border-gold/30">
+              <span class="material-symbols-outlined text-[15px]">verified</span>
+              <span id="heroTag2Text">100% Hak Jual Kembali</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-5/12 aspect-video overflow-hidden relative shrink-0">
+          <img 
+            id="heroCoverImg"
+            src="assets/hero-pixar-cover.jpg" 
+            alt="3D Pixar Cover Digital Products" 
+            class="w-full h-full object-cover object-center aspect-video transform hover:scale-105 transition duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#01291D] via-transparent to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+      <!-- Sticky Discovery Filter Deck -->
+      <div class="discovery-deck sticky top-28 z-30 flex flex-col gap-3 p-3 rounded-2xl bg-header-pine/90 backdrop-blur-xl border border-white/15 shadow-2xl mb-6">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
+          <!-- Search Input -->
+          <div class="relative w-full lg:w-3/5 flex items-center">
+            <span class="material-symbols-outlined absolute left-4 text-slate-400 pointer-events-none text-[20px]">search</span>
+            <input 
+              type="text" 
+              id="searchInput" 
+              oninput="window.handleSearch()" 
+              placeholder="Cari 12+ produk digital, template, worksheet, games..." 
+              class="discovery-search-input w-full pl-11 pr-4 py-2.5 rounded-full bg-white text-slate-900 text-sm placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary font-medium"
+            />
+          </div>
+          <!-- Metric Badges -->
+          <div class="flex items-center justify-between w-full lg:w-auto gap-3">
+            <div class="discovery-badge flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-high text-white text-xs font-bold border border-white/10">
+              <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+              <span id="counterBadge">12 Koleksi Siap Akses</span>
+            </div>
+            <div class="discovery-badge flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface-variant text-xs">
+              <span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+              <span>Cloud 10 Gbps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1" id="categoryGroup">
+          <button onclick="window.filterCategory('Semua', this)" class="cat-pill active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition">Semua</button>
+          <button onclick="window.filterCategory('Mega Bundle', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Mega Bundle</button>
+          <button onclick="window.filterCategory('Template Toko', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Template Toko</button>
+          <button onclick="window.filterCategory('E-Book', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">E-Book</button>
+          <button onclick="window.filterCategory('Worksheet Anak', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Worksheet Anak</button>
+          <button onclick="window.filterCategory('Games Edukasi', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Games Edukasi</button>
+          <button onclick="window.filterCategory('Aplikasi & Coding', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Aplikasi & Coding</button>
+          <button onclick="window.filterCategory('Komunitas & Bahan', this)" class="cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">Komunitas & Bahan</button>
+        </div>
+      </div>
+
+      <!-- Product Grid: 12 Pristine White Elevated Cards -->
+      <div id="productCatalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyCatalogState" class="hidden text-center py-16 bg-surface-container/50 rounded-2xl border border-white/10 mt-4">
+        <span class="material-symbols-outlined text-[48px] text-secondary">folder_off</span>
+        <h3 class="font-headline text-lg font-bold text-white mt-2">Produk Tidak Ditemukan</h3>
+        <p class="text-xs text-on-surface-variant mt-1">Coba gunakan kata kunci pencarian yang lain.</p>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 2: LISENSI & PANDUAN RESELLER ================= -->
+    <section id="view-lisensi" class="hidden flex-col w-full max-w-4xl mx-auto gap-6">
+      <!-- Top Return Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <button onclick="window.navigateTo('view-katalog')" class="inline-flex items-center gap-1.5 text-secondary hover:text-white text-xs font-bold px-3 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md transition">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          <span>KEMBALI KE KATALOG UTAMA</span>
+        </button>
+        <div class="inline-flex items-center gap-1.5 text-on-surface-variant text-xs font-medium">
+          <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+          <span>ID LISENSI: #PLR-MRR-2026-OFFICIAL</span>
+        </div>
+      </div>
+
+      <!-- Editorial Header -->
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-1 bg-secondary rounded-full"></span>
+          <span class="text-[11px] uppercase tracking-widest font-bold text-secondary">Ketentuan Mitra Komersial</span>
+        </div>
+        <h1 class="font-headline text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+          Panduan Hak Jual Kembali & Lisensi Reseller (PLR / MRR)
+        </h1>
+        <p class="text-sm text-on-surface-variant mt-1">
+          Ketentuan resmi, legalitas hak cipta, dan kebebasan monetisasi 100% profit milik pembeli/reseller.
+        </p>
+      </div>
+
+      <!-- Status Banner Card -->
+      <div class="relative overflow-hidden rounded-2xl bg-surface-container-high p-6 shadow-xl border border-white/10">
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="flex flex-col gap-2 max-w-xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-badge-orange-start to-badge-orange-end text-white text-xs font-bold uppercase w-fit shadow-md">
+              <span class="material-symbols-outlined text-[16px]">verified_user</span>
+              <span>STATUS LISENSI: 100% UNLIMITED RESELL RIGHTS</span>
+            </div>
+            <p class="text-sm text-on-surface font-medium leading-relaxed">
+              Dengan memiliki paket ini, Anda otomatis memiliki hak penuh untuk menjual ulang seluruh isi paket dan menyimpan 100% keuntungan langsung ke rekening Anda tanpa bagi hasil.
+            </p>
+            <div class="flex items-center gap-4 text-on-surface-variant text-xs mt-1">
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Tanpa Royalti</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Lifetime Access</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> White-Label Siap Edar</span>
+            </div>
+          </div>
+          <div class="bg-surface-container-lowest/80 backdrop-blur-md rounded-2xl p-4 flex flex-col items-center justify-center text-center shrink-0 min-w-[170px] border border-white/10">
+            <span class="text-[11px] font-bold uppercase text-secondary">Margin Reseller</span>
+            <span class="font-headline text-4xl font-black text-primary my-0.5">100%</span>
+            <span class="text-xs text-on-surface-variant">Laba Bersih Rekening</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Highlight Value Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-card-surface rounded-2xl p-4 shadow-md flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-tag-mint-bg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-tag-mint-text text-[24px]">price_change</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-[11px] font-bold uppercase text-text-on-light-muted">Bebas Patok Tarif</span>
+            <span class="font-headline text-sm font-bold text-text-on-light-primary truncate">Jual Satuan / Bundle</span>
+          </div>
+        </div>
+        <div class="bg-card-surface rounded-2xl p-4 shadow-md flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-tag-mint-bg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-tag-mint-text text-[24px]">branding_watermark</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-[11px] font-bold uppercase text-text-on-light-muted">Full White-Label</span>
+            <span class="font-headline text-sm font-bold text-text-on-light-primary truncate">Pakai Nama Toko Anda</span>
+          </div>
+        </div>
+        <div class="bg-card-surface rounded-2xl p-4 shadow-md flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-tag-mint-bg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-tag-mint-text text-[24px]">loyalty</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-[11px] font-bold uppercase text-text-on-light-muted">Lead Magnet</span>
+            <span class="font-headline text-sm font-bold text-text-on-light-primary truncate">Bisa Jadi Bonus Promo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rules Comparison (DO's vs DON'Ts) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+        <!-- DO's Column -->
+        <div class="bg-card-surface rounded-2xl p-5 shadow-xl flex flex-col justify-between text-text-on-light-primary relative overflow-hidden">
+          <div class="h-2 w-full bg-primary-container absolute top-0 inset-x-0"></div>
+          <div>
+            <div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+              <span class="w-8 h-8 rounded-full bg-tag-mint-bg text-tag-mint-text flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">thumb_up</span>
+              </span>
+              <h2 class="font-headline text-base font-bold text-text-on-light-primary">Hal Yang DIIZINKAN (DO's)</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 text-xs text-text-on-light-muted">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-tag-mint-text text-[16px] shrink-0 mt-0.5">check_circle</span>
+                <span>Menjual kembali produk dalam format satuan atau bundling dengan harga yang Anda tentukan sendiri.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-tag-mint-text text-[16px] shrink-0 mt-0.5">check_circle</span>
+                <span>Mengganti cover produk, nama brand toko, dan nomor kontak admin dengan identitas Anda sendiri.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-tag-mint-text text-[16px] shrink-0 mt-0.5">check_circle</span>
+                <span>Menjadikan produk sebagai bonus penambah nilai untuk meningkatkan penjualan produk fisik/digital lain.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-tag-mint-text text-[16px] shrink-0 mt-0.5">check_circle</span>
+                <span>Mengantongi 100% laba hasil penjualan tanpa perlu menyetor komisi atau royalti apa pun.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DON'Ts Column -->
+        <div class="bg-card-surface rounded-2xl p-5 shadow-xl flex flex-col justify-between text-text-on-light-primary relative overflow-hidden">
+          <div class="h-2 w-full bg-disc-red absolute top-0 inset-x-0"></div>
+          <div>
+            <div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+              <span class="w-8 h-8 rounded-full bg-red-50 text-disc-red flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">thumb_down</span>
+              </span>
+              <h2 class="font-headline text-base font-bold text-text-on-light-primary">Hal Yang DILARANG (DON'Ts)</h2>
+            </div>
+            <ul class="mt-4 space-y-2.5 text-xs text-text-on-light-muted">
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-disc-red text-[16px] shrink-0 mt-0.5">cancel</span>
+                <span>Membagikan link folder Google Drive secara gratis di grup umum tanpa adanya transaksi penjualan.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-disc-red text-[16px] shrink-0 mt-0.5">cancel</span>
+                <span>Mengklaim hak paten orisinalitas pembuatan software inti Google Apps Script.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-disc-red text-[16px] shrink-0 mt-0.5">cancel</span>
+                <span>Menjual kembali produk dengan janji skema investasi bodong atau penggandaan uang ilegal.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marketing Kit CTA -->
+      <div class="bg-surface-container p-5 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 class="font-headline text-base font-bold text-white">Butuh Bahan Iklan & Mockup 3D?</h3>
+          <p class="text-xs text-on-surface-variant mt-0.5">Unduh template banner promosi dan copywriting siap pakai di Google Drive.</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="px-5 py-2.5 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold transition flex items-center gap-2 shrink-0">
+          <span class="material-symbols-outlined text-[18px]">cloud_download</span>
+          <span>Unduh Bahan Iklan</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: ADMIN MANAGER (SHEET SYNC) ================= -->
+    <section id="view-admin" class="hidden flex-col w-full pb-12">
+      <!-- PIN Login Overlay if not Authenticated -->
+      <div id="adminPinGate" class="flex flex-col items-center justify-center py-12 px-4">
+        <div class="bg-card-surface text-text-on-light-primary rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-center border-2 border-border-gold">
+          <div class="w-16 h-16 rounded-2xl bg-tag-mint-bg text-tag-mint-text mx-auto flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[32px]">admin_panel_settings</span>
+          </div>
+          <h2 class="font-headline text-xl font-bold">Kunci Keamanan Toko</h2>
+          <p class="text-xs text-text-on-light-muted mt-1 mb-5">
+            Masukkan PIN Admin untuk mengatur nama website, nomor WhatsApp, dan link produk. (Default PIN: <strong class="text-slate-800">12345</strong>)
+          </p>
+          <form onsubmit="window.handleVerifyPin(event)" class="space-y-4">
+            <input 
+              type="password" 
+              id="adminPinInput" 
+              placeholder="Masukkan PIN Admin..." 
+              class="w-full text-center py-3 px-4 text-xl tracking-widest rounded-xl border-2 border-slate-200 focus:border-primary-container focus:outline-none"
+              maxlength="10"
+              required
+            />
+            <button type="submit" class="w-full py-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-sm font-bold shadow-md transition">
+              Buka Panel Pengaturan
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Main Admin Dashboard Panel (Visible after PIN verified) -->
+      <div id="adminDashboardPanel" class="hidden flex-col gap-6">
+        
+        <!-- Status & Engine Meta Banner -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 bg-surface-container-high/80 backdrop-blur-xl px-5 py-3.5 rounded-2xl border border-white/10 shadow-xl">
+          <div class="flex items-center gap-3 flex-wrap">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest text-primary text-xs font-bold">
+              <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+              <span>Terhubung: Google Apps Script Web App (Sheet Database v1.0)</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs">
+              <span class="material-symbols-outlined text-[15px] text-secondary">cloud_done</span>
+              <span>Sinkronisasi Terakhir: Realtime 0ms</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="window.lockAdmin()" class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-white transition flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">lock</span>
+              <span>Kunci Panel</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Bento KPI Stat Widgets -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Stat 1 -->
+          <div class="rounded-2xl bg-card-surface p-5 shadow-xl text-text-on-light-primary">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-text-on-light-muted">Total Produk Aktif</span>
+              <div class="w-9 h-9 rounded-xl bg-tag-mint-bg text-tag-mint-text flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+              </div>
+            </div>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span id="kpiActiveCount" class="font-headline text-3xl font-extrabold text-text-on-light-primary leading-none">12</span>
+              <span class="text-sm font-bold text-text-on-light-muted">/ 12 Item</span>
+            </div>
+            <div class="mt-2 flex items-center gap-1 text-tag-mint-text text-[11px] font-bold">
+              <span class="material-symbols-outlined text-[14px]">check_circle</span>
+              <span>100% Terpublikasi (Aktif)</span>
+            </div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="rounded-2xl bg-card-surface p-5 shadow-xl text-text-on-light-primary">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-text-on-light-muted">Tautan Google Drive</span>
+              <div class="w-9 h-9 rounded-xl bg-sky-50 text-disc-sky flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">folder_shared</span>
+              </div>
+            </div>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="font-headline text-3xl font-extrabold text-text-on-light-primary leading-none">4</span>
+              <span class="text-xs font-bold text-text-on-light-muted">Direktori Folder</span>
+            </div>
+            <div class="mt-2 flex items-center gap-1 text-text-on-light-muted text-[11px]">
+              <span class="material-symbols-outlined text-[14px] text-disc-sky">lock_open</span>
+              <span>Akses Siap Unduh Langsung</span>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="rounded-2xl bg-card-surface p-5 shadow-xl text-text-on-light-primary">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-text-on-light-muted">Tautan Google Sites</span>
+              <div class="w-9 h-9 rounded-xl bg-amber-50 text-secondary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">web</span>
+              </div>
+            </div>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="font-headline text-3xl font-extrabold text-text-on-light-primary leading-none">5</span>
+              <span class="text-xs font-bold text-text-on-light-muted">Portal Edukasi</span>
+            </div>
+            <div class="mt-2 flex items-center gap-1 text-text-on-light-muted text-[11px]">
+              <span class="material-symbols-outlined text-[14px] text-secondary">open_in_new</span>
+              <span>Landing Page Interaktif</span>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="rounded-2xl bg-card-surface p-5 shadow-xl text-text-on-light-primary">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-text-on-light-muted">WA Support Hotline</span>
+              <div class="w-9 h-9 rounded-xl bg-tag-mint-bg text-primary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">forum</span>
+              </div>
+            </div>
+            <div class="mt-3 flex flex-col">
+              <span id="kpiWaNumber" class="font-headline text-lg font-bold text-text-on-light-primary truncate">+62 813-3166-1370</span>
+              <span class="text-[11px] font-semibold text-tag-mint-text mt-0.5">Tersambung Resmi (Siaga)</span>
+            </div>
+            <div class="mt-2 flex items-center gap-1 text-text-on-light-muted text-[11px]">
+              <span class="material-symbols-outlined text-[14px] text-primary-container">speed</span>
+              <span>Direct Link WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Setting Card: Kustomisasi Toko Pembeli (White-Label Form) -->
+        <div class="bg-surface-container-high rounded-2xl p-6 border border-white/10 shadow-xl">
+          <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
+            <span class="material-symbols-outlined text-secondary text-[24px]">storefront</span>
+            <h3 class="font-headline text-lg font-bold text-white">Kustomisasi Toko (Hak Jual Putus / White-Label)</h3>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-4">
+            Buyer atau pemilik baru dapat langsung mengganti nama toko, slogan, dan nomor WhatsApp mereka sendiri di sini.
+          </p>
+
+          <form onsubmit="window.handleSaveSettings(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Nama Judul Website / Toko</label>
+              <input type="text" id="cfgJudul" class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container text-white border border-white/15 text-sm focus:outline-none focus:ring-2 focus:ring-primary" required/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Slogan / Tagline Toko</label>
+              <input type="text" id="cfgSub" class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container text-white border border-white/15 text-sm focus:outline-none focus:ring-2 focus:ring-primary" required/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Nomor WhatsApp Admin (Untuk Menerima Order/Tanya)</label>
+              <input type="text" id="cfgWa" placeholder="Contoh: 6281331661370" class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container text-white border border-white/15 text-sm focus:outline-none focus:ring-2 focus:ring-primary" required/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase mb-1">Pesan Otomatis WhatsApp</label>
+              <input type="text" id="cfgPesan" class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container text-white border border-white/15 text-sm focus:outline-none focus:ring-2 focus:ring-primary" required/>
+            </div>
+            <div class="md:col-span-2 flex justify-end gap-3 pt-2">
+              <button type="submit" class="px-6 py-2.5 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold flex items-center gap-2 shadow-lg transition">
+                <span class="material-symbols-outlined text-[18px]">save</span>
+                <span>Simpan Perubahan Toko</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Setting Card: Manajemen Banner Hero (Sampul Depan) -->
+        <div class="bg-surface-container-high rounded-2xl p-6 border border-white/10 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4 border-l-4 border-secondary">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[24px]">view_carousel</span>
+              <h3 class="font-headline text-lg font-bold text-white">Banner Hero (Sampul Depan)</h3>
+            </div>
+            <p class="text-xs text-on-surface-variant mt-1 max-w-xl">
+              Ubah judul utama, tagline promo, deskripsi penawaran, dan upload foto cover sampul depan website Anda.
+            </p>
+          </div>
+          <button onclick="window.openHeroModal()" class="px-5 py-2.5 rounded-xl bg-secondary hover:bg-yellow-400 text-header-pine text-xs font-bold flex items-center gap-2 shadow-lg transition shrink-0">
+            <span class="material-symbols-outlined text-[18px]">edit</span>
+            <span>Edit Banner Hero</span>
+          </button>
+        </div>
+
+        <!-- Product Table Management Card -->
+        <div class="bg-card-surface rounded-2xl shadow-xl overflow-hidden text-text-on-light-primary">
+          <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h3 class="font-headline text-base font-bold text-text-on-light-primary">Daftar Manajemen 12 Produk</h3>
+              <p class="text-xs text-text-on-light-muted mt-0.5">Kelola link Google Drive/Sites dan status aktif produk.</p>
+            </div>
+            <button onclick="window.openAddProductModal()" class="px-4 py-2 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold flex items-center gap-1.5 transition shadow">
+              <span class="material-symbols-outlined text-[18px]">add_circle</span>
+              <span>Tambah Produk Baru</span>
+            </button>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 text-slate-500 uppercase tracking-wider font-bold">
+                <tr>
+                  <th class="py-3 px-3">No</th>
+                  <th class="py-3 px-3">Foto</th>
+                  <th class="py-3 px-4">Nama Produk</th>
+                  <th class="py-3 px-3">Kategori</th>
+                  <th class="py-3 px-3">Tautan Akses</th>
+                  <th class="py-3 px-3">Status</th>
+                  <th class="py-3 px-3 text-center">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductTableBody" class="divide-y divide-slate-100 font-medium">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= PRODUCT DETAIL MODAL DIALOG ================= -->
+  <div id="product-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-header-pine/85 backdrop-blur-md">
+    <div class="absolute inset-0" onclick="window.closeModal()"></div>
+    <div class="relative z-10 w-full max-w-[520px] bg-card-surface rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] p-6 sm:p-7 flex flex-col text-text-on-light-primary">
+      <!-- Top Utility Bar -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+          <span class="material-symbols-outlined text-[14px]">lock_open</span>
+          <span>AKSES INSTAN • BEBAS AKSES</span>
+        </div>
+        <button onclick="window.closeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Icon & Header Stack -->
+      <div class="flex flex-col items-center text-center mt-2">
+        <div id="modalIconContainer" class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-3 shadow-md bg-disc-teal overflow-hidden relative">
+          <img id="modalCustomImg" class="hidden w-full h-full object-cover" alt="Cover" />
+          <span id="modalIcon" class="material-symbols-outlined text-[30px]">draw</span>
+        </div>
+        <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text text-xs font-bold mb-2">
+          <span class="material-symbols-outlined text-[14px]">verified</span>
+          <span>100% Hak Jual (PLR/MRR)</span>
+        </div>
+        <h3 id="modalTitle" class="font-headline text-lg sm:text-xl font-bold leading-snug text-text-on-light-primary">
+          Nama Produk Digital
+        </h3>
+        <p id="modalCategory" class="text-xs font-bold text-slate-400 mt-0.5 uppercase tracking-wider">
+          Kategori Produk
+        </p>
+      </div>
+
+      <!-- Description Block -->
+      <div class="bg-card-surface-subtle p-4 rounded-2xl my-4 text-xs text-text-on-light-muted leading-relaxed border border-slate-100">
+        <p id="modalDesc">Deskripsi detail berkas produk dan instruksi pemanfaatan.</p>
+        <div class="mt-3 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-semibold text-slate-500">
+          <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px]">inventory</span>
+            <span id="modalSize">Ukuran: Direct Link</span>
+          </span>
+          <span class="text-tag-mint-text flex items-center gap-1">
+            <span class="material-symbols-outlined text-[15px]">check_circle</span>
+            <span>Bebas Akses & Unduh</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col gap-2">
+        <a id="modalDownloadBtn" href="#" target="_blank" class="w-full py-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold text-center shadow-lg transition flex items-center justify-center gap-2">
+          <span>Buka & Unduh Materi</span>
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+        </a>
+        <button onclick="window.copyModalLink()" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">content_copy</span>
+          <span id="copyLinkBtnText">Salin Tautan Akses</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD / EDIT PRODUCT MODAL ================= -->
+  <div id="productEditModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-header-pine/85 backdrop-blur-md">
+    <div class="absolute inset-0" onclick="window.closeEditModal()"></div>
+    <div class="relative z-10 w-full max-w-lg max-h-[92vh] overflow-y-auto bg-card-surface rounded-3xl p-6 text-text-on-light-primary shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <h3 id="editModalHeading" class="font-headline text-base font-bold">Edit Informasi Produk</h3>
+        <button onclick="window.closeEditModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="window.handleSaveProduct(event)" class="mt-4 space-y-3">
+        <input type="hidden" id="editProductId" />
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Judul Produk</label>
+          <input type="text" id="editProductTitle" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
+
+        <!-- Section: Edit Foto Produk -->
+        <div id="editPhotoSection" class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2.5 transition">
+          <div class="flex items-center justify-between">
+            <label class="text-[11px] font-bold text-slate-700 uppercase flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-disc-emerald">image</span>
+              <span>Foto / Visual Sampul Produk</span>
+            </label>
+            <button 
+              type="button" 
+              onclick="window.resetProductPhoto()" 
+              class="text-[10px] font-bold text-slate-500 hover:text-disc-red transition flex items-center gap-0.5"
+              title="Kembalikan ke ilustrasi 3D bawaan"
+            >
+              <span class="material-symbols-outlined text-[13px]">refresh</span>
+              <span>Gunakan 3D Default</span>
+            </button>
+          </div>
+
+          <!-- Preview & Controls Flexbox -->
+          <div class="flex items-center gap-3">
+            <!-- Box Preview Foto (Rasio 16:9) -->
+            <div id="editPhotoPreviewContainer" class="w-32 aspect-video rounded-xl bg-slate-200 border-2 border-dashed border-slate-300 overflow-hidden shrink-0 relative flex items-center justify-center shadow-inner">
+              <img id="editPhotoPreviewImg" src="" alt="Preview" class="hidden w-full h-full object-cover object-center aspect-video" />
+              <div id="editPhotoPreviewPlaceholder" class="flex flex-col items-center justify-center text-slate-400 text-center p-1">
+                <span class="material-symbols-outlined text-[22px]">add_photo_alternate</span>
+                <span class="text-[9px] font-semibold mt-0.5">3D Default (16:9)</span>
+              </div>
+            </div>
+
+            <!-- Input Controls -->
+            <div class="flex-1 space-y-1.5">
+              <!-- Upload File Button -->
+              <div>
+                <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold transition shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-disc-emerald">upload_file</span>
+                  <span>Upload Foto (Maks 5 MB)</span>
+                  <input type="file" id="editProductFileInput" accept="image/*" class="hidden" onchange="window.handlePhotoFileUpload(event)" />
+                </label>
+              </div>
+
+              <!-- Or Paste URL -->
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="editProductImageUrl" 
+                  oninput="window.handlePhotoUrlInput(this.value)" 
+                  placeholder="Atau tempel URL gambar (Drive/Imgur/Web)..." 
+                  class="w-full px-3 py-1.5 rounded-lg border border-slate-200 text-[11px] focus:ring-2 focus:ring-primary focus:outline-none placeholder:text-slate-400" 
+                />
+              </div>
+            </div>
+          </div>
+          <p class="text-[10px] text-slate-400 leading-tight">
+            Maksimal ukuran file 5 MB (Rasio foto 16:9 otomatis dipangkas presisi). Jika kosong, memakai ilustrasi 3D Pixar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Kategori</label>
+            <input type="text" id="editProductCategory" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Ukuran / Format</label>
+            <input type="text" id="editProductSize" placeholder="cth: 4.8 GB / PDF" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Tautan Akses (Google Drive / Canva / Sites)</label>
+          <input type="url" id="editProductUrl" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Deskripsi Singkat</label>
+          <textarea id="editProductDesc" rows="2" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="window.closeEditModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold">Batal</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-primary-container text-white text-xs font-bold shadow">Simpan Produk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= EDIT BANNER HERO MODAL ================= -->
+  <div id="heroBannerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-header-pine/85 backdrop-blur-md">
+    <div class="absolute inset-0" onclick="window.closeHeroModal()"></div>
+    <div class="relative z-10 w-full max-w-lg max-h-[92vh] overflow-y-auto bg-card-surface rounded-3xl p-6 text-text-on-light-primary shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">view_carousel</span>
+          </div>
+          <h3 class="font-headline text-base font-bold">Edit Banner Hero (Sampul Depan)</h3>
+        </div>
+        <button onclick="window.closeHeroModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="window.handleSaveHeroBanner(event)" class="mt-4 space-y-3">
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Judul Utama Banner</label>
+          <input type="text" id="heroEditTitle" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Teks Badge Promo (Kapsul Kuning Atas)</label>
+          <input type="text" id="heroEditBadge" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required />
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Deskripsi / Penjelasan Singkat</label>
+          <textarea id="heroEditDesc" rows="3" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" required></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Label Tag 1 (Kiri)</label>
+            <input type="text" id="heroEditTag1" placeholder="cth: 12 Bundel Eksklusif" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Label Tag 2 (Kanan)</label>
+            <input type="text" id="heroEditTag2" placeholder="cth: 100% Hak Jual Kembali" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-primary focus:outline-none" />
+          </div>
+        </div>
+
+        <!-- Section: Edit Gambar Cover Banner -->
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <label class="text-[11px] font-bold text-slate-700 uppercase flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-disc-emerald">photo_library</span>
+              <span>Gambar Sampul Banner Hero</span>
+            </label>
+            <button 
+              type="button" 
+              onclick="window.resetHeroImage()" 
+              class="text-[10px] font-bold text-slate-500 hover:text-disc-red transition flex items-center gap-0.5"
+              title="Kembalikan ke gambar 3D Pixar bawaan"
+            >
+              <span class="material-symbols-outlined text-[13px]">refresh</span>
+              <span>Gunakan Cover Pixar 3D Default</span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <!-- Box Preview Foto Hero (Rasio 16:9) -->
+            <div id="heroPreviewContainer" class="w-32 aspect-video rounded-xl bg-slate-900 border-2 border-slate-300 overflow-hidden shrink-0 relative flex items-center justify-center shadow-inner">
+              <img id="heroEditPreviewImg" src="assets/hero-pixar-cover.jpg" alt="Preview Hero" class="w-full h-full object-cover object-center aspect-video" />
+            </div>
+
+            <!-- Controls -->
+            <div class="flex-1 space-y-1.5">
+              <div>
+                <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold transition shadow-sm">
+                  <span class="material-symbols-outlined text-[16px] text-disc-emerald">upload_file</span>
+                  <span>Upload Foto (Maks 5 MB)</span>
+                  <input type="file" id="heroFileInput" accept="image/*" class="hidden" onchange="window.handleHeroFileUpload(event)" />
+                </label>
+              </div>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="heroEditImageUrl" 
+                  oninput="window.handleHeroUrlInput(this.value)" 
+                  placeholder="Atau tempel URL gambar (Drive/Web)..." 
+                  class="w-full px-3 py-1.5 rounded-lg border border-slate-200 text-[11px] focus:ring-2 focus:ring-primary focus:outline-none placeholder:text-slate-400" 
+                />
+              </div>
+            </div>
+          </div>
+          <p class="text-[10px] text-slate-400 leading-tight">
+            Maksimal ukuran file 5 MB (Rasio foto 16:9 otomatis dipangkas presisi). Mendukung JPG/PNG dan link Google Drive.
+          </p>
+        </div>
+
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="window.closeHeroModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold">Batal</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-primary-container text-white text-xs font-bold shadow">Simpan Banner Hero</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a 
+    id="floatingWhatsApp" 
+    href="https://wa.me/6281331661370?text=Halo%20Admin%20Sangcreator,%20saya%20ingin%20tanya%20akses%20produk%20digital." 
+    target="_blank" 
+    class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-primary-container hover:bg-disc-emerald text-white flex items-center justify-center shadow-[0_12px_30px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 group"
+    title="Hubungi Admin Resmi"
+  >
+    <div class="absolute inset-0 rounded-full bg-primary-container animate-ping opacity-40"></div>
+    <span class="material-symbols-outlined text-[28px] relative z-10">forum</span>
+  </a>
+
+  <!-- ================= CUSTOM TOAST NOTIFICATION ================= -->
+  <div id="toast-notification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-full bg-surface-container-high text-white text-xs font-bold shadow-2xl border border-border-gold/50 flex items-center gap-2 pointer-events-none opacity-0 translate-y-4">
+    <span id="toastIcon" class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+    <span id="toastMessage">Pemberitahuan</span>
+  </div>
+
+  <!-- ================= JAVASCRIPT APPLICATION CORE ================= -->
+  <script>
+    // State Aplikasi Terpusat (Pilar 2)
+    window.appState = {
+      isAuth: false,
+      currentView: 'view-katalog',
+      activeCategory: 'Semua',
+      searchQuery: '',
+      theme: 'dark',
+      config: {
+        headerJudul: 'DIGITAL PRODUK',
+        headerSub: 'Pelopor Produk Digital No 1',
+        headerBadge: '100% BISA DIJUAL KEMBALI',
+        waAdmin: '6281331661370',
+        pesanWA: 'Halo Admin Sangcreator, saya ingin konfirmasi hak jual dan akses produk digital.',
+        heroTitle: 'Koleksi Aset Digital Premium Siap Jual',
+        heroDesc: 'Akses instan ribuan materi siap edar, template komersial, materi anak, dan modul coding dengan hak cipta PLR/MRR legalitas penuh untuk monetisasi digital Anda.',
+        heroBadge: 'PROMO RESELLER VAULT 2026 • 100% PROFIT ANDA',
+        heroTag1: '12 Bundel Eksklusif',
+        heroTag2: '100% Hak Jual Kembali',
+        heroImage: 'assets/hero-pixar-cover.jpg'
+      },
+      products: []
+    };
+
+    // Deteksi Runtime (Dual-Mode: Local Mock vs GAS Live)
+    window.isGAS = (typeof google !== 'undefined' && google.script && typeof google.script.run !== 'undefined');
+
+    // 12 Koleksi Aset Asli
+    var defaultProducts = [
+      { id: 'PRD-01', order: 1, title: 'Promo Paket Mega Bundling', category: 'Mega Bundle', icon: 'inventory_2', color: '#EF4444', url: 'https://www.digitalprodukno1seindonesia.my.id/', desc: 'Paket terlengkap se-Indonesia berisi master bundle e-course, template, asset desain, dan hak distribusi tak terbatas.', size: '12.4 GB', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-02', order: 2, title: 'Pro Growth Bundle Landing Page', category: 'Template Toko', icon: 'palette', color: '#8B5CF6', url: 'https://sangcreator.my.canva.site/c3wht4nzam1rpg0r', desc: 'Template Canva & Elementor konversi tinggi untuk etalase jualan digital, biolink toko, dan presentasi sales pitch.', size: '450+ Layout', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-03', order: 3, title: 'Paket Super Hemat 9 E-Book', category: 'E-Book', icon: 'menu_book', color: '#EC4899', url: 'https://sites.google.com/view/paket-ebook-sangcreator/halaman-muka', desc: 'Koleksi 9 e-book premium seputar strategi pemasaran digital, sales funneling, dan monetisasi internet.', size: '9 Modul PDF', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-04', order: 4, title: 'Paket 3 Coding', category: 'Aplikasi & Coding', icon: 'code', color: '#2563EB', url: 'https://sites.google.com/view/codinglevel1-3sangcreator/halaman-muka', desc: 'Modul belajar pemrograman web, logic coding, dan otomasi tools digital dari Level 1 sampai Level 3 lengkap.', size: 'Full Sourcecode', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-05', order: 5, title: 'Paket 15000++ Worksheet Anak', category: 'Worksheet Anak', icon: 'draw', color: '#0D9488', url: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2', desc: '15.000+ lembar aktivitas anak prasekolah, tracing angka, labirin, gunting-tempel, dan puzzle siap cetak.', size: '4.8 GB', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-06', order: 6, title: '20 Games Edukasi Anak', category: 'Games Edukasi', icon: 'sports_esports', color: '#F97316', url: 'https://sites.google.com/view/game-edukasi-2', desc: '20 permainan edukatif interaktif HTML5 ramah ponsel untuk melatih logika berpikir dan kreativitas anak.', size: '20 Web Game', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-07', order: 7, title: '10 Games Edukasi Anak Muslim', category: 'Games Edukasi', icon: 'star', color: '#10B981', url: 'https://sites.google.com/view/gameedukasianakmuslim', desc: '10 game edukatif pembelajaran karakter islami, doa harian, hijaiyah, dan kisah nabi interaktif.', size: '10 Web Game', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-08', order: 8, title: '39000++ Media Anak Kreatif', category: 'Komunitas & Bahan', icon: 'image', color: '#0284C7', url: 'https://drive.google.com/drive/folders/1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue?usp=drive_link', desc: 'Koleksi raksasa 39.000+ aset grafis, clip art kartun, animasi, audio effect, dan bahan ajar multimedia anak.', size: '8.2 GB', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-09', order: 9, title: '1000++ Worksheet Islami', category: 'Worksheet Anak', icon: 'auto_stories', color: '#22C55E', url: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing', desc: '1.000+ lembar mewarnai dan aktivitas edukasi bertema adab, rukun islam, dan kaligrafi ramah anak.', size: '1.5 GB', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-10', order: 10, title: 'Games Edukasi 8 Seri', category: 'Games Edukasi', icon: 'extension', color: '#A855F7', url: 'https://sites.google.com/view/landingpagesangcreator/halaman-muka', desc: 'Paket game edukasi 8 seri tematik berfitur leaderboard dan skor yang disukai anak-anak.', size: '8 Seri Paket', active: true, license: '100% Hak Jual', imageUrl: '' },
+      { id: 'PRD-11', order: 11, title: 'Cover & Banner Promosi', category: 'Komunitas & Bahan', icon: 'perm_media', color: '#6366F1', url: 'https://drive.google.com', desc: 'Ratusan bahan iklan promosi, mockup 3D e-cover produk, feed Instagram, dan copywriting siap sebar.', size: '2.1 GB', active: true, license: 'Bahan Iklan', imageUrl: '' },
+      { id: 'PRD-12', order: 12, title: 'WA Grup Komunitas & Reseller', category: 'Komunitas & Bahan', icon: 'forum', color: '#25D366', url: 'https://wa.me/6281331661370', desc: 'Grup bimbingan strategi promosi, update produk baru, dan konsultasi privat sesama reseller aktif.', size: 'VIP Access', active: true, license: 'Support', imageUrl: '' }
+    ];
+
+    /**
+     * Inisialisasi Aplikasi Saat Muat
+     */
+    window.initApp = function() {
+      // Muat dari localStorage jika ada
+      try {
+        var localConfig = localStorage.getItem('reseller_vault_config');
+        if (localConfig) {
+          var parsedCfg = JSON.parse(localConfig);
+          window.appState.config = Object.assign({}, window.appState.config, parsedCfg);
+        }
+        var localProducts = localStorage.getItem('reseller_vault_products');
+        if (localProducts) {
+          var parsed = JSON.parse(localProducts);
+          window.appState.products = parsed.map(function(p) {
+            if (typeof p.imageUrl === 'undefined') p.imageUrl = '';
+            return p;
+          });
+        } else {
+          window.appState.products = defaultProducts;
+        }
+      } catch (e) {
+        window.appState.products = defaultProducts;
+      }
+
+      // Terapkan Mode Tema (Clean / Dark)
+      var savedTheme = localStorage.getItem('reseller_vault_theme') || 'dark';
+      window.setTheme(savedTheme);
+
+      window.applyConfigToUI();
+      window.renderProductCatalog();
+      window.renderAdminTable();
+
+      // Sinkronisasi Live dengan Backend Google Apps Script (Bila Ada)
+      if (window.isGAS) {
+        google.script.run
+          .withSuccessHandler(function(res) {
+            if (res && res.success && res.data) {
+              if (res.data.config) {
+                window.appState.config = res.data.config;
+                localStorage.setItem('reseller_vault_config', JSON.stringify(res.data.config));
+              }
+              if (res.data.products && res.data.products.length > 0) {
+                window.appState.products = res.data.products;
+                localStorage.setItem('reseller_vault_products', JSON.stringify(res.data.products));
+              }
+              window.applyConfigToUI();
+              window.renderProductCatalog();
+              window.renderAdminTable();
+            }
+          })
+          .getPublicData();
+      }
+    };
+
+    /**
+     * Navigasi 0ms SPA
+     */
+    window.navigateTo = function(targetSectionId) {
+      window.appState.currentView = targetSectionId;
+
+      var sections = ['view-katalog', 'view-lisensi', 'view-admin'];
+      sections.forEach(function(sId) {
+        var el = document.getElementById(sId);
+        if (el) {
+          if (sId === targetSectionId) {
+            el.classList.remove('hidden');
+            el.classList.add('flex');
+          } else {
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+          }
+        }
+      });
+
+      // Update Nav Tabs Active Class
+      var tabs = document.querySelectorAll('.nav-tab');
+      tabs.forEach(function(t) {
+        if (t.getAttribute('data-target') === targetSectionId) {
+          t.className = 'nav-tab active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition';
+        } else {
+          t.className = 'nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap';
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    /**
+     * Helper Format URL Gambar (Mendukung link Google Drive, Imgur, Web)
+     */
+    window.formatImageUrl = function(url) {
+      if (!url) return '';
+      url = String(url).trim();
+      var driveMatch = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (driveMatch && driveMatch[1]) {
+        return 'https://drive.google.com/thumbnail?id=' + driveMatch[1] + '&sz=w800';
+      }
+      return url;
+    };
+
+    /**
+     * Generator Visual Kartu Produk (Foto Kustom atau Ilustrasi 3D Pixar Bawaan)
+     */
+    window.getProductVisual = function(item) {
+      var photoUrl = window.formatImageUrl(item.imageUrl || item.image || '');
+      if (photoUrl) {
+        var safeId = String(item.id || '').replace(/'/g, "\\'");
+        var safeTitle = String(item.title || '').replace(/'/g, "\\'");
+        return `
+          <div class="relative w-full h-full overflow-hidden bg-slate-900 flex items-center justify-center">
+            <img 
+              src="${photoUrl}" 
+              alt="${item.title}" 
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" 
+              onerror="this.onerror=null; this.parentElement.innerHTML = window.getPixarSvgById('${safeId}', '${safeTitle}');"
+            />
+          </div>
+        `;
+      }
+      return window.getPixarSvgById(item.id, item.title);
+    };
+
+    /**
+     * Generator Visual Ilustrasi 3D Pixar Vibrant Bawaan untuk Tiap Kartu Produk
+     */
+    window.getPixarSvgById = function(id, title) {
+      id = String(id || '');
+      title = String(title || '').toLowerCase();
+
+      // 1. Mega Bundling (Treasure Box Gold & Ruby)
+      if (id === 'PRD-01' || title.indexOf('mega') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#450a0a"/><stop offset="50%" stop-color="#7f1d1d"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+              <linearGradient id="chestGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fef08a"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg1)"/>
+            <circle cx="160" cy="90" r="95" fill="#f59e0b" opacity="0.25" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="20" fill="#000000" opacity="0.45"/>
+            <!-- 3D Gift Vault Body -->
+            <rect x="95" y="70" width="130" height="78" rx="18" fill="#dc2626" stroke="#fca5a5" stroke-width="3"/>
+            <rect x="85" y="52" width="150" height="26" rx="10" fill="#b91c1c" stroke="#fef08a" stroke-width="3"/>
+            <rect x="146" y="52" width="28" height="96" fill="url(#chestGlow)"/>
+            <!-- 3D Ribbon Bow -->
+            <path d="M130 52 C105 20, 130 12, 160 42 C190 12, 215 20, 190 52 Z" fill="url(#chestGlow)" stroke="#ffffff" stroke-width="2.5"/>
+            <!-- 3D Floating Gold Coins & Gems -->
+            <circle cx="68" cy="65" r="14" fill="url(#chestGlow)" stroke="#ffffff" stroke-width="2"/>
+            <text x="68" y="71" font-size="16" font-weight="900" fill="#78350f" text-anchor="middle">$</text>
+            <circle cx="250" cy="80" r="13" fill="url(#chestGlow)" stroke="#ffffff" stroke-width="2"/>
+            <text x="250" y="85" font-size="14" font-weight="900" fill="#78350f" text-anchor="middle">$</text>
+            <!-- 3D Sparkle Stars -->
+            <polygon points="160,10 166,24 180,28 166,32 160,46 154,32 140,28 154,24" fill="#fef08a"/>
+            <polygon points="60,28 63,35 70,37 63,39 60,46 57,39 50,37 57,35" fill="#67e8f9"/>
+            <polygon points="265,35 268,42 275,44 268,46 265,53 262,46 255,44 262,42" fill="#f472b6"/>
+          </svg>`;
+      }
+
+      // 2. Template Toko (Canva & Storefront Studio)
+      if (id === 'PRD-02' || title.indexOf('template') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e1065"/><stop offset="50%" stop-color="#4c1d95"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg2)"/>
+            <circle cx="160" cy="90" r="90" fill="#a78bfa" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Desktop Screen -->
+            <rect x="75" y="32" width="170" height="106" rx="14" fill="#0f172a" stroke="#c4b5fd" stroke-width="3"/>
+            <rect x="75" y="32" width="170" height="24" rx="8" fill="#1e1b4b"/>
+            <circle cx="92" cy="44" r="4" fill="#ef4444"/>
+            <circle cx="104" cy="44" r="4" fill="#f59e0b"/>
+            <circle cx="116" cy="44" r="4" fill="#10b981"/>
+            <!-- Storefront Awning -->
+            <path d="M70 56 L250 56 L240 76 L80 76 Z" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="86" width="55" height="36" rx="6" fill="#ec4899"/>
+            <rect x="155" y="86" width="70" height="12" rx="4" fill="#60a5fa"/>
+            <rect x="155" y="104" width="45" height="12" rx="4" fill="#fde047"/>
+            <!-- Floating Canva Palette Wheel -->
+            <circle cx="255" cy="42" r="22" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+            <circle cx="250" cy="36" r="4" fill="#ec4899"/>
+            <circle cx="262" cy="38" r="4" fill="#3b82f6"/>
+            <circle cx="256" cy="48" r="4" fill="#10b981"/>
+          </svg>`;
+      }
+
+      // 3. 9 E-Book (Magical Book Library & Bulb)
+      if (id === 'PRD-03' || title.indexOf('book') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#500724"/><stop offset="50%" stop-color="#831843"/><stop offset="100%" stop-color="#db2777"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg3)"/>
+            <circle cx="160" cy="70" r="90" fill="#f472b6" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- Stack of 3 Books -->
+            <rect x="80" y="116" width="160" height="26" rx="6" fill="#8b5cf6" stroke="#c4b5fd" stroke-width="2.5"/>
+            <line x1="88" y1="129" x2="232" y2="129" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 3"/>
+            <rect x="90" y="90" width="140" height="26" rx="6" fill="#ec4899" stroke="#fbcfe8" stroke-width="2.5"/>
+            <line x1="98" y1="103" x2="222" y2="103" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 3"/>
+            <rect x="100" y="64" width="120" height="26" rx="6" fill="#06b6d4" stroke="#a5f3fc" stroke-width="2.5"/>
+            <!-- 3D Pixar Glowing Lightbulb with Cute Eyes -->
+            <circle cx="160" cy="35" r="20" fill="#fde047" stroke="#eab308" stroke-width="3"/>
+            <circle cx="153" cy="33" r="3" fill="#1e293b"/>
+            <circle cx="167" cy="33" r="3" fill="#1e293b"/>
+            <path d="M154 41 Q160 46 166 41" stroke="#1e293b" stroke-width="2" fill="none"/>
+            <rect x="152" y="52" width="16" height="8" fill="#94a3b8" rx="3"/>
+            <polygon points="120,20 123,26 129,28 123,30 120,36 117,30 111,28 117,26" fill="#fef08a"/>
+            <polygon points="200,20 203,26 209,28 203,30 200,36 197,30 191,28 197,26" fill="#fef08a"/>
+          </svg>`;
+      }
+
+      // 4. Paket 3 Coding (Cute Pixar Robot & Code)
+      if (id === 'PRD-04' || title.indexOf('coding') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#082f49"/><stop offset="50%" stop-color="#0369a1"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg4)"/>
+            <circle cx="160" cy="90" r="90" fill="#38bdf8" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- Antenna -->
+            <line x1="160" y1="20" x2="160" y2="40" stroke="#00f0ff" stroke-width="4"/>
+            <circle cx="160" cy="16" r="8" fill="#f43f5e"/>
+            <!-- Robot 3D Head -->
+            <rect x="100" y="40" width="120" height="90" rx="22" fill="#0f172a" stroke="#38bdf8" stroke-width="4"/>
+            <!-- Glowing Eyes Screen -->
+            <rect x="116" y="58" width="30" height="26" rx="8" fill="#00f0ff"/>
+            <circle cx="131" cy="71" r="5" fill="#0f172a"/>
+            <circle cx="133" cy="69" r="1.5" fill="#ffffff"/>
+            <rect x="174" y="58" width="30" height="26" rx="8" fill="#00f0ff"/>
+            <circle cx="189" cy="71" r="5" fill="#0f172a"/>
+            <circle cx="191" cy="69" r="1.5" fill="#ffffff"/>
+            <!-- Hologram Code Tag -->
+            <text x="160" y="112" fill="#10b981" font-size="18" font-family="monospace" font-weight="bold" text-anchor="middle">&lt;/CODING&gt;</text>
+            <rect x="90" y="68" width="10" height="28" rx="4" fill="#00f0ff"/>
+            <rect x="220" y="68" width="10" height="28" rx="4" fill="#00f0ff"/>
+          </svg>`;
+      }
+
+      // 5. 15.000++ Worksheet Anak (Playroom Desk)
+      if (id === 'PRD-05' || (title.indexOf('worksheet') !== -1 && title.indexOf('islami') === -1)) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#042f2e"/><stop offset="50%" stop-color="#0f766e"/><stop offset="100%" stop-color="#14b8a6"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg5)"/>
+            <circle cx="160" cy="90" r="90" fill="#2dd4bf" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Worksheet Papers -->
+            <rect x="120" y="30" width="95" height="115" rx="8" fill="#cbd5e1" transform="rotate(10 167 87)"/>
+            <rect x="95" y="30" width="100" height="118" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="3"/>
+            <!-- Checklist Items -->
+            <rect x="110" y="50" width="18" height="18" rx="4" fill="#0d9488"/>
+            <line x1="138" y1="59" x2="175" y2="59" stroke="#64748b" stroke-width="4"/>
+            <rect x="110" y="78" width="18" height="18" rx="4" fill="#f59e0b"/>
+            <line x1="138" y1="87" x2="175" y2="87" stroke="#64748b" stroke-width="4"/>
+            <rect x="110" y="106" width="18" height="18" rx="4" fill="#ec4899"/>
+            <line x1="138" y1="115" x2="175" y2="115" stroke="#64748b" stroke-width="4"/>
+            <!-- 3D Crayon / Pencil -->
+            <g transform="translate(195, 60) rotate(-35)">
+              <polygon points="0,0 18,0 9,-18" fill="#facc15"/>
+              <rect x="0" y="0" width="18" height="70" fill="#ef4444" rx="2"/>
+              <rect x="0" y="70" width="18" height="14" fill="#f472b6" rx="3"/>
+            </g>
+          </svg>`;
+      }
+
+      // 6. 20 Games Edukasi (Neon Gamepad & Arcade)
+      if (id === 'PRD-06' || (title.indexOf('games') !== -1 && title.indexOf('muslim') === -1 && title.indexOf('8') === -1)) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#431407"/><stop offset="50%" stop-color="#9a3412"/><stop offset="100%" stop-color="#ea580c"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg6)"/>
+            <circle cx="160" cy="90" r="90" fill="#fb923c" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Neon Gamepad -->
+            <path d="M75 70 C60 95, 65 130, 95 130 C110 130, 120 115, 160 115 C200 115, 210 130, 225 130 C255 130, 260 95, 245 70 C235 48, 205 40, 160 40 C115 40, 85 48, 75 70 Z" fill="#ea580c" stroke="#fef08a" stroke-width="4"/>
+            <!-- D-Pad Left -->
+            <rect x="95" y="70" width="28" height="9" rx="3" fill="#ffffff"/>
+            <rect x="104.5" y="60.5" width="9" height="28" rx="3" fill="#ffffff"/>
+            <!-- Action Buttons Right -->
+            <circle cx="210" cy="65" r="5.5" fill="#fde047"/>
+            <circle cx="225" cy="74" r="5.5" fill="#10b981"/>
+            <circle cx="210" cy="83" r="5.5" fill="#38bdf8"/>
+            <circle cx="195" cy="74" r="5.5" fill="#f43f5e"/>
+            <!-- Center Button -->
+            <circle cx="160" cy="75" r="10" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+            <!-- Arcade Power-Up Floating -->
+            <polygon points="55,30 58,38 66,40 58,42 55,50 52,42 44,40 52,38" fill="#fef08a"/>
+            <polygon points="265,30 268,38 276,40 268,42 265,50 262,42 254,40 262,38" fill="#67e8f9"/>
+          </svg>`;
+      }
+
+      // 7. 10 Games Edukasi Muslim (Crescent & Mosque)
+      if (id === 'PRD-07' || title.indexOf('muslim') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#022c22"/><stop offset="50%" stop-color="#064e3b"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg7)"/>
+            <circle cx="160" cy="80" r="90" fill="#6ee7b7" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Mosque Silhouette -->
+            <path d="M90 145 L230 145 L230 110 Q160 85 90 110 Z" fill="#064e3b" stroke="#10b981" stroke-width="3"/>
+            <rect x="148" y="118" width="24" height="27" rx="12" fill="#fef08a"/>
+            <rect x="80" y="85" width="12" height="60" rx="3" fill="#064e3b"/>
+            <rect x="228" y="85" width="12" height="60" rx="3" fill="#064e3b"/>
+            <!-- Glowing 3D Golden Crescent Moon -->
+            <path d="M160 25 A38 38 0 1 0 198 77 A28 28 0 1 1 160 25 Z" fill="#fef08a" stroke="#d97706" stroke-width="3"/>
+            <polygon points="208,36 213,47 225,50 216,58 219,70 208,64 197,70 200,58 191,50 203,47" fill="#fef08a"/>
+          </svg>`;
+      }
+
+      // 8. 39.000++ Media Anak Kreatif (Art Studio)
+      if (id === 'PRD-08' || title.indexOf('media') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0c4a6e"/><stop offset="50%" stop-color="#0284c7"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg8)"/>
+            <circle cx="160" cy="90" r="90" fill="#7dd3fc" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Polaroid Photo 1 -->
+            <g transform="translate(100, 30) rotate(-14)">
+              <rect x="0" y="0" width="76" height="96" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+              <rect x="7" y="7" width="62" height="60" fill="#f43f5e" rx="4"/>
+              <circle cx="22" cy="22" r="7" fill="#fef08a"/>
+              <polygon points="7,60 28,34 46,50 58,40 69,60" fill="#e11d48"/>
+            </g>
+            <!-- 3D Polaroid Photo 2 (Front) -->
+            <g transform="translate(145, 38) rotate(12)">
+              <rect x="0" y="0" width="80" height="100" rx="6" fill="#ffffff" stroke="#00f0ff" stroke-width="3.5"/>
+              <rect x="7" y="7" width="66" height="64" fill="#0284c7" rx="4"/>
+              <circle cx="24" cy="24" r="8" fill="#fde047"/>
+              <polygon points="7,64 32,36 50,52 62,42 73,64" fill="#0369a1"/>
+            </g>
+          </svg>`;
+      }
+
+      // 9. 1000++ Worksheet Islami (Holy Book Rehal)
+      if (id === 'PRD-09' || (title.indexOf('worksheet') !== -1 && title.indexOf('islami') !== -1)) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#14532d"/><stop offset="50%" stop-color="#15803d"/><stop offset="100%" stop-color="#4ade80"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg9)"/>
+            <circle cx="160" cy="80" r="90" fill="#86efac" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Rehal Wooden Stand -->
+            <line x1="95" y1="145" x2="225" y2="95" stroke="#d97706" stroke-width="9" stroke-linecap="round"/>
+            <line x1="225" y1="145" x2="95" y2="95" stroke="#b45309" stroke-width="9" stroke-linecap="round"/>
+            <!-- Open Holy Book -->
+            <path d="M160 88 Q115 65 75 75 L75 112 Q115 102 160 125 Z" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+            <path d="M160 88 Q205 65 245 75 L245 112 Q205 102 160 125 Z" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+            <circle cx="118" cy="94" r="10" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+            <circle cx="202" cy="94" r="10" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+          </svg>`;
+      }
+
+      // 10. Games Edukasi 8 Seri (3D Puzzle Characters)
+      if (id === 'PRD-10' || title.indexOf('8 seri') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg10" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3b0764"/><stop offset="50%" stop-color="#6b21a8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg10)"/>
+            <circle cx="160" cy="90" r="90" fill="#d8b4fe" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 4 Interlocking Puzzle Blocks -->
+            <rect x="98" y="45" width="56" height="56" rx="8" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+            <circle cx="126" cy="45" r="9" fill="#facc15"/>
+            <circle cx="154" cy="73" r="9" fill="#facc15"/>
+            <rect x="162" y="45" width="56" height="56" rx="8" fill="#a855f7" stroke="#6b21a8" stroke-width="3"/>
+            <circle cx="190" cy="101" r="9" fill="#a855f7"/>
+            <rect x="98" y="107" width="56" height="42" rx="8" fill="#06b6d4" stroke="#0891b2" stroke-width="3"/>
+            <circle cx="126" cy="107" r="9" fill="#06b6d4"/>
+            <rect x="162" y="107" width="56" height="42" rx="8" fill="#ec4899" stroke="#be185d" stroke-width="3"/>
+          </svg>`;
+      }
+
+      // 11. Cover & Banner Promosi (3D Studio & Megaphone)
+      if (id === 'PRD-11' || title.indexOf('banner') !== -1 || title.indexOf('cover') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bg11" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#450a0a"/><stop offset="50%" stop-color="#991b1b"/><stop offset="100%" stop-color="#f87171"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg11)"/>
+            <circle cx="160" cy="90" r="90" fill="#fca5a5" opacity="0.3" filter="blur(20px)"/>
+            <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Stand Banner -->
+            <rect x="90" y="45" width="60" height="92" rx="8" fill="#ef4444" stroke="#ffffff" stroke-width="3.5"/>
+            <circle cx="120" cy="72" r="14" fill="#fde047"/>
+            <rect x="100" y="96" width="40" height="8" rx="3" fill="#ffffff"/>
+            <!-- 3D Megaphone Blasting Waves -->
+            <g transform="translate(160, 68)">
+              <polygon points="0,18 42,0 42,50 0,32" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+              <ellipse cx="42" cy="25" rx="6" ry="25" fill="#d97706"/>
+              <rect x="-18" y="18" width="18" height="14" rx="4" fill="#ef4444"/>
+              <path d="M-9 32 L-4 50 L5 50 L0 32" fill="#475569"/>
+              <path d="M54 12 Q64 25 54 38" stroke="#00f0ff" stroke-width="4" fill="none"/>
+              <path d="M64 4 Q78 25 64 46" stroke="#00f0ff" stroke-width="4" fill="none"/>
+            </g>
+          </svg>`;
+      }
+
+      // 12. WA Grup Komunitas (Crown & WhatsApp Sphere)
+      return `
+        <svg viewBox="0 0 320 180" class="w-full h-full">
+          <defs>
+            <linearGradient id="bg12" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#022c22"/><stop offset="50%" stop-color="#065f46"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+            <linearGradient id="waSphere" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#25d366"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#bg12)"/>
+          <circle cx="160" cy="90" r="90" fill="#6ee7b7" opacity="0.3" filter="blur(20px)"/>
+          <ellipse cx="160" cy="155" rx="100" ry="18" fill="#000000" opacity="0.45"/>
+          <!-- 3D WhatsApp Speech Sphere -->
+          <circle cx="160" cy="96" r="46" fill="url(#waSphere)" stroke="#86efac" stroke-width="4"/>
+          <path d="M138 126 L124 146 L148 138 Z" fill="#059669"/>
+          <!-- Phone Icon White -->
+          <path d="M148 84 C146 84 144 86 143 88 C140 92 138 98 142 105 C146 112 153 118 161 121 C167 124 172 122 175 119 C177 117 178 115 178 113 L173 105 C172 104 170 104 169 105 L165 107 C162 105 156 100 155 97 L157 93 C158 92 158 90 157 89 Z" fill="#ffffff"/>
+          <!-- 3D Golden VIP Crown -->
+          <polygon points="160,22 172,40 188,28 184,52 136,52 132,28 148,40" fill="#fde047" stroke="#d97706" stroke-width="2.5"/>
+          <circle cx="160" cy="22" r="3.5" fill="#ef4444"/>
+          <circle cx="188" cy="28" r="3" fill="#3b82f6"/>
+          <circle cx="132" cy="28" r="3" fill="#3b82f6"/>
+        </svg>`;
+    };
+
+    /**
+     * Render Katalog Produk dengan Ilustrasi 3D Pixar Penuh
+     */
+    window.renderProductCatalog = function() {
+      var grid = document.getElementById('productCatalogGrid');
+      var empty = document.getElementById('emptyCatalogState');
+      if (!grid) return;
+
+      var query = window.appState.searchQuery.toLowerCase().trim();
+      var activeCat = window.appState.activeCategory;
+
+      var filtered = window.appState.products.filter(function(p) {
+        if (p.active === false) return false;
+        var matchCat = (activeCat === 'Semua') || (p.category === activeCat);
+        var matchSearch = !query || 
+          (p.title && p.title.toLowerCase().indexOf(query) !== -1) ||
+          (p.desc && p.desc.toLowerCase().indexOf(query) !== -1) ||
+          (p.category && p.category.toLowerCase().indexOf(query) !== -1);
+        return matchCat && matchSearch;
+      });
+
+      var counterBadge = document.getElementById('counterBadge');
+      if (counterBadge) counterBadge.textContent = filtered.length + ' Koleksi Siap Akses';
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        if (empty) empty.classList.remove('hidden');
+        return;
+      }
+
+      if (empty) empty.classList.add('hidden');
+
+      var html = '';
+      for (var i = 0; i < filtered.length; i++) {
+        var item = filtered[i];
+        var iconColor = item.color || '#0D9488';
+        var iconGlyph = item.icon || 'inventory_2';
+        var safeTitle = String(item.title).replace(/'/g, "\\'");
+        var safeCat = String(item.category).replace(/'/g, "\\'");
+        var safeUrl = String(item.url).replace(/'/g, "\\'");
+        var safeDesc = String(item.desc || '').replace(/'/g, "\\'");
+        var safeSize = String(item.size || 'Direct').replace(/'/g, "\\'");
+        var safeImageUrl = String(item.imageUrl || item.image || '').replace(/'/g, "\\'");
+        var visual3D = window.getProductVisual(item);
+
+        html += `
+          <article class="product-card group text-text-on-light-primary">
+            <!-- 3D Pixar Visual Header -->
+            <div class="card-visual-header">
+              ${visual3D}
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-text-on-light-muted">${item.category}</span>
+                  <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tag-mint-bg text-tag-mint-text text-[10px] font-bold">
+                    <span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    <span>100% Hak Jual</span>
+                  </div>
+                </div>
+
+                <h2 class="font-headline text-base font-bold text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors line-clamp-1">
+                  ${item.title}
+                </h2>
+                <p class="text-xs text-text-on-light-muted mt-1.5 line-clamp-2 leading-relaxed">
+                  ${item.desc}
+                </p>
+              </div>
+
+              <div class="flex flex-col mt-4 pt-3 border-t border-slate-100">
+                <div class="flex items-center justify-between text-[11px] text-text-on-light-muted mb-3">
+                  <span class="flex items-center gap-1 truncate max-w-[150px]">
+                    <span class="material-symbols-outlined text-[14px] text-disc-emerald">link</span>
+                    <span>${item.size || 'Instant Link'}</span>
+                  </span>
+                  <span class="font-bold text-slate-700">PLR License</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button 
+                    onclick="window.showModal('${safeTitle}', '${safeCat}', '${safeUrl}', '${safeDesc}', '${safeSize}', '${iconGlyph}', '${iconColor}', '${safeImageUrl}')"
+                    class="w-full py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition text-center"
+                  >
+                    Detail Info
+                  </button>
+                  <a 
+                    href="${item.url}" 
+                    target="_blank" 
+                    class="w-full py-2 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold text-center shadow transition flex items-center justify-center gap-1"
+                  >
+                    <span>Buka Akses</span>
+                    <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      grid.innerHTML = html;
+    };
+
+    /**
+     * Filter Kategori
+     */
+    window.filterCategory = function(cat, buttonEl) {
+      window.appState.activeCategory = cat;
+      var pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(function(p) {
+        p.className = 'cat-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition';
+      });
+      if (buttonEl) {
+        buttonEl.className = 'cat-pill active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition';
+      }
+      window.renderProductCatalog();
+    };
+
+    /**
+     * Search Handler Debounced
+     */
+    var searchTimer = null;
+    window.handleSearch = function() {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function() {
+        var input = document.getElementById('searchInput');
+        window.appState.searchQuery = input ? input.value : '';
+        window.renderProductCatalog();
+      }, 150);
+    };
+
+    /**
+     * Modal Detail Akses
+     */
+    var currentModalTargetUrl = '#';
+    window.showModal = function(title, cat, url, desc, size, iconGlyph, iconColor, imageUrl) {
+      currentModalTargetUrl = url;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalCategory').textContent = cat;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalSize').textContent = 'Ukuran: ' + (size || 'Direct Link');
+      document.getElementById('modalDownloadBtn').href = url;
+      document.getElementById('copyLinkBtnText').textContent = 'Salin Tautan Akses';
+
+      var customImg = document.getElementById('modalCustomImg');
+      var iconEl = document.getElementById('modalIcon');
+      var iconContainer = document.getElementById('modalIconContainer');
+
+      var photoUrl = window.formatImageUrl(imageUrl || '');
+      if (photoUrl && customImg) {
+        customImg.src = photoUrl;
+        customImg.classList.remove('hidden');
+        if (iconEl) iconEl.classList.add('hidden');
+      } else {
+        if (customImg) {
+          customImg.src = '';
+          customImg.classList.add('hidden');
+        }
+        if (iconEl) {
+          iconEl.classList.remove('hidden');
+          iconEl.textContent = iconGlyph || 'draw';
+        }
+      }
+
+      if (iconContainer) iconContainer.style.backgroundColor = iconColor || '#0D9488';
+
+      var modal = document.getElementById('product-modal');
+      if (modal) modal.classList.remove('hidden');
+    };
+
+    window.closeModal = function() {
+      var modal = document.getElementById('product-modal');
+      if (modal) modal.classList.add('hidden');
+    };
+
+    window.copyModalLink = function() {
+      if (!currentModalTargetUrl || currentModalTargetUrl === '#') return;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(currentModalTargetUrl).then(function() {
+          document.getElementById('copyLinkBtnText').textContent = 'Tersalin ke Clipboard!';
+          window.showToast('Tautan berhasil disalin!', 'success');
+        });
+      } else {
+        window.showToast('Tautan: ' + currentModalTargetUrl, 'info');
+      }
+    };
+
+    /**
+     * Verifikasi PIN Admin
+     */
+    window.handleVerifyPin = function(event) {
+      event.preventDefault();
+      var pin = document.getElementById('adminPinInput').value;
+
+      if (pin === '12345') {
+        window.appState.isAuth = true;
+        document.getElementById('adminPinGate').classList.add('hidden');
+        document.getElementById('adminDashboardPanel').classList.remove('hidden');
+        document.getElementById('adminDashboardPanel').classList.add('flex');
+        window.populateConfigForm();
+        window.showToast('PIN Terverifikasi! Selamat datang di Panel Admin.', 'success');
+      } else {
+        window.showToast('PIN salah! Coba gunakan PIN default: 12345', 'error');
+      }
+    };
+
+    window.lockAdmin = function() {
+      window.appState.isAuth = false;
+      document.getElementById('adminPinGate').classList.remove('hidden');
+      document.getElementById('adminDashboardPanel').classList.add('hidden');
+      document.getElementById('adminDashboardPanel').classList.remove('flex');
+      document.getElementById('adminPinInput').value = '';
+      window.showToast('Panel Admin dikunci.', 'info');
+    };
+
+    /**
+     * Kustomisasi Toko (Simpan Pengaturan)
+     */
+    window.populateConfigForm = function() {
+      var cfg = window.appState.config;
+      document.getElementById('cfgJudul').value = cfg.headerJudul || 'DIGITAL PRODUK';
+      document.getElementById('cfgSub').value = cfg.headerSub || 'Pelopor Produk Digital No 1';
+      document.getElementById('cfgWa').value = cfg.waAdmin || '6281331661370';
+      document.getElementById('cfgPesan').value = cfg.pesanWA || 'Halo Admin...';
+    };
+
+    window.handleSaveSettings = function(event) {
+      event.preventDefault();
+      var newCfg = {
+        headerJudul: document.getElementById('cfgJudul').value.trim(),
+        headerSub: document.getElementById('cfgSub').value.trim(),
+        headerBadge: '100% BISA DIJUAL KEMBALI',
+        waAdmin: document.getElementById('cfgWa').value.replace(/[^0-9]/g, ''),
+        pesanWA: document.getElementById('cfgPesan').value.trim()
+      };
+
+      // Optimistic UI Update
+      window.appState.config = newCfg;
+      localStorage.setItem('reseller_vault_config', JSON.stringify(newCfg));
+      window.applyConfigToUI();
+      window.showToast('Pengaturan toko berhasil disimpan!', 'success');
+
+      // Sinkronisasi Backend Google Sheets (Bila Ada)
+      if (window.isGAS) {
+        google.script.run
+          .withSuccessHandler(function(res) {
+            if (res && res.success) {
+              window.showToast('Tersinkronisasi otomatis dengan Google Sheets!', 'success');
+            }
+          })
+          .updateSettings(newCfg, '12345');
+      }
+    };
+
+    window.applyConfigToUI = function() {
+      var cfg = window.appState.config;
+      if (cfg.headerJudul) document.getElementById('appHeaderTitle').textContent = cfg.headerJudul;
+      if (cfg.headerSub) document.getElementById('appHeaderSub').textContent = cfg.headerSub;
+      if (cfg.waAdmin) {
+        var cleanWA = cfg.waAdmin.replace(/[^0-9]/g, '');
+        var encodedMsg = encodeURIComponent(cfg.pesanWA || 'Halo Admin');
+        var waLink = 'https://wa.me/' + cleanWA + '?text=' + encodedMsg;
+        document.getElementById('floatingWhatsApp').href = waLink;
+        var kpiWa = document.getElementById('kpiWaNumber');
+        if (kpiWa) kpiWa.textContent = '+' + cleanWA;
+      }
+
+      // Update Tampilan Banner Hero (Sampul Depan)
+      if (cfg.heroTitle) {
+        var elTitle = document.getElementById('heroTitleText');
+        if (elTitle) elTitle.textContent = cfg.heroTitle;
+      }
+      if (cfg.heroDesc) {
+        var elDesc = document.getElementById('heroDescText');
+        if (elDesc) elDesc.textContent = cfg.heroDesc;
+      }
+      if (cfg.heroBadge) {
+        var elBadge = document.getElementById('heroBadgeText');
+        if (elBadge) elBadge.textContent = cfg.heroBadge;
+      }
+      if (cfg.heroTag1) {
+        var elTag1 = document.getElementById('heroTag1Text');
+        if (elTag1) elTag1.textContent = cfg.heroTag1;
+      }
+      if (cfg.heroTag2) {
+        var elTag2 = document.getElementById('heroTag2Text');
+        if (elTag2) elTag2.textContent = cfg.heroTag2;
+      }
+      if (cfg.heroImage) {
+        var elImg = document.getElementById('heroCoverImg');
+        if (elImg) elImg.src = window.formatImageUrl(cfg.heroImage);
+      }
+    };
+
+    /**
+     * Theme Toggle (Clean Mode / Dark Mode)
+     */
+    window.setTheme = function(theme) {
+      var isClean = (theme === 'clean');
+      window.appState.theme = isClean ? 'clean' : 'dark';
+      localStorage.setItem('reseller_vault_theme', window.appState.theme);
+
+      var body = document.body || document.documentElement;
+      var icon = document.getElementById('themeToggleIcon');
+      var text = document.getElementById('themeToggleText');
+
+      if (body && body.classList) {
+        if (isClean) {
+          body.classList.remove('theme-dark');
+          body.classList.add('theme-clean');
+        } else {
+          body.classList.remove('theme-clean');
+          body.classList.add('theme-dark');
+        }
+      }
+
+      if (isClean) {
+        if (icon) {
+          icon.textContent = 'dark_mode';
+          icon.className = 'material-symbols-outlined text-[17px] text-amber-500';
+        }
+        if (text) text.textContent = 'Mode Dark';
+      } else {
+        if (icon) {
+          icon.textContent = 'light_mode';
+          icon.className = 'material-symbols-outlined text-[17px] text-secondary';
+        }
+        if (text) text.textContent = 'Mode Clean';
+      }
+    };
+
+    window.toggleTheme = function() {
+      var current = window.appState.theme || 'dark';
+      var next = (current === 'dark') ? 'clean' : 'dark';
+      window.setTheme(next);
+      window.showToast('Beralih ke ' + (next === 'clean' ? 'Model Clean (Terang)' : 'Model Dark (Gelap)'), 'info');
+    };
+
+    /**
+     * Hero Banner Modal Handlers (Sampul Depan)
+     */
+    window.openHeroModal = function() {
+      var cfg = window.appState.config;
+      document.getElementById('heroEditTitle').value = cfg.heroTitle || 'Koleksi Aset Digital Premium Siap Jual';
+      document.getElementById('heroEditBadge').value = cfg.heroBadge || 'PROMO RESELLER VAULT 2026 • 100% PROFIT ANDA';
+      document.getElementById('heroEditDesc').value = cfg.heroDesc || 'Akses instan ribuan materi siap edar, template komersial, materi anak, dan modul coding dengan hak cipta PLR/MRR legalitas penuh untuk monetisasi digital Anda.';
+      document.getElementById('heroEditTag1').value = cfg.heroTag1 || '12 Bundel Eksklusif';
+      document.getElementById('heroEditTag2').value = cfg.heroTag2 || '100% Hak Jual Kembali';
+
+      var heroImg = cfg.heroImage || 'assets/hero-pixar-cover.jpg';
+      document.getElementById('heroEditImageUrl').value = heroImg;
+      window.handleHeroUrlInput(heroImg);
+
+      document.getElementById('heroBannerModal').classList.remove('hidden');
+    };
+
+    window.closeHeroModal = function() {
+      document.getElementById('heroBannerModal').classList.add('hidden');
+    };
+
+    window.handleHeroUrlInput = function(val) {
+      var formatted = window.formatImageUrl(val) || 'assets/hero-pixar-cover.jpg';
+      var preview = document.getElementById('heroEditPreviewImg');
+      if (preview) preview.src = formatted;
+    };
+
+    window.handleHeroFileUpload = function(event) {
+      var file = event.target.files && event.target.files[0];
+      if (!file) return;
+      if (!file.type.match('image.*')) {
+        window.showToast('File harus berupa gambar (JPG/PNG/WEBP)!', 'error');
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        window.showToast('Ukuran file maksimal 5 MB!', 'error');
+        return;
+      }
+      window.processImageTo16x9(file, function(optimizedBase64) {
+        document.getElementById('heroEditImageUrl').value = optimizedBase64;
+        window.handleHeroUrlInput(optimizedBase64);
+        window.showToast('Gambar sampul hero (16:9) berhasil dimuat!', 'success');
+      });
+    };
+
+    window.resetHeroImage = function() {
+      var defaultCover = 'assets/hero-pixar-cover.jpg';
+      document.getElementById('heroEditImageUrl').value = defaultCover;
+      var fileInput = document.getElementById('heroFileInput');
+      if (fileInput) fileInput.value = '';
+      window.handleHeroUrlInput(defaultCover);
+      window.showToast('Cover hero di-reset ke 3D Pixar bawaan.', 'info');
+    };
+
+    window.handleSaveHeroBanner = function(event) {
+      event.preventDefault();
+      var cfg = window.appState.config;
+      cfg.heroTitle = document.getElementById('heroEditTitle').value.trim();
+      cfg.heroBadge = document.getElementById('heroEditBadge').value.trim();
+      cfg.heroDesc = document.getElementById('heroEditDesc').value.trim();
+      cfg.heroTag1 = document.getElementById('heroEditTag1').value.trim() || '12 Bundel Eksklusif';
+      cfg.heroTag2 = document.getElementById('heroEditTag2').value.trim() || '100% Hak Jual Kembali';
+      cfg.heroImage = window.formatImageUrl(document.getElementById('heroEditImageUrl').value.trim()) || 'assets/hero-pixar-cover.jpg';
+
+      localStorage.setItem('reseller_vault_config', JSON.stringify(cfg));
+      window.applyConfigToUI();
+      window.closeHeroModal();
+      window.showToast('Banner Hero berhasil diperbarui!', 'success');
+
+      if (window.isGAS) {
+        google.script.run.updateSettings(cfg, '12345');
+      }
+    };
+
+    /**
+     * Admin Table CRUD & Toggle Status
+     */
+    window.renderAdminTable = function() {
+      var tbody = document.getElementById('adminProductTableBody');
+      if (!tbody) return;
+
+      var activeCount = 0;
+      var html = '';
+      for (var i = 0; i < window.appState.products.length; i++) {
+        var item = window.appState.products[i];
+        if (item.active !== false) activeCount++;
+
+        var isAktif = item.active !== false;
+        var statusBadge = isAktif
+          ? '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold text-[10px]">Aktif</span>'
+          : '<span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 font-bold text-[10px]">Nonaktif</span>';
+
+        var photoUrl = window.formatImageUrl(item.imageUrl || item.image || '');
+        var thumbHtml = photoUrl
+          ? `<img src="${photoUrl}" alt="${item.title}" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\\'material-symbols-outlined text-[18px] text-slate-400\\'>image</span>';" />`
+          : `<span class="material-symbols-outlined text-[18px] text-slate-400">image</span>`;
+
+        html += `
+          <tr class="hover:bg-slate-50 transition">
+            <td class="py-2.5 px-3 font-bold text-slate-400">${i + 1}</td>
+            <td class="py-2.5 px-3">
+              <div onclick="window.openEditModal('${item.id}', true)" class="w-10 h-10 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shrink-0 flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-primary transition shadow-sm group" title="Klik untuk edit foto produk">
+                ${thumbHtml}
+              </div>
+            </td>
+            <td class="py-2.5 px-4">
+              <span class="font-bold text-slate-800">${item.title}</span>
+            </td>
+            <td class="py-2.5 px-3 text-slate-500">${item.category}</td>
+            <td class="py-2.5 px-3 text-disc-sky truncate max-w-[130px]">
+              <a href="${item.url}" target="_blank" class="hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">link</span>
+                <span>${item.size || 'Link Akses'}</span>
+              </a>
+            </td>
+            <td class="py-2.5 px-3">${statusBadge}</td>
+            <td class="py-2.5 px-3 text-center">
+              <div class="inline-flex items-center gap-1">
+                <button onclick="window.openEditModal('${item.id}', true)" class="p-1.5 rounded-lg hover:bg-emerald-50 text-disc-emerald transition" title="Edit Foto Produk">
+                  <span class="material-symbols-outlined text-[17px]">photo_camera</span>
+                </button>
+                <button onclick="window.toggleProductActive('${item.id}')" class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition" title="Ubah Status">
+                  <span class="material-symbols-outlined text-[17px]">${isAktif ? 'visibility' : 'visibility_off'}</span>
+                </button>
+                <button onclick="window.openEditModal('${item.id}')" class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition" title="Edit Detail Produk">
+                  <span class="material-symbols-outlined text-[17px]">edit</span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }
+
+      tbody.innerHTML = html;
+      var kpiActive = document.getElementById('kpiActiveCount');
+      if (kpiActive) kpiActive.textContent = activeCount;
+    };
+
+    window.toggleProductActive = function(id) {
+      for (var i = 0; i < window.appState.products.length; i++) {
+        if (window.appState.products[i].id === id) {
+          window.appState.products[i].active = !window.appState.products[i].active;
+          var newStatus = window.appState.products[i].active;
+          localStorage.setItem('reseller_vault_products', JSON.stringify(window.appState.products));
+          window.renderProductCatalog();
+          window.renderAdminTable();
+          window.showToast('Status produk berhasil diubah!', 'success');
+
+          if (window.isGAS) {
+            google.script.run.toggleProductStatus(id, newStatus, '12345');
+          }
+          break;
+        }
+      }
+    };
+
+    window.openEditModal = function(id, focusPhoto) {
+      var item = window.appState.products.find(function(p) { return p.id === id; });
+      if (!item) return;
+
+      document.getElementById('editModalHeading').textContent = 'Edit Informasi Produk';
+      document.getElementById('editProductId').value = item.id;
+      document.getElementById('editProductTitle').value = item.title;
+      document.getElementById('editProductCategory').value = item.category;
+      document.getElementById('editProductSize').value = item.size || '';
+      document.getElementById('editProductUrl').value = item.url;
+      document.getElementById('editProductDesc').value = item.desc || '';
+
+      var imgUrl = item.imageUrl || item.image || '';
+      document.getElementById('editProductImageUrl').value = imgUrl;
+      window.handlePhotoUrlInput(imgUrl);
+
+      document.getElementById('productEditModal').classList.remove('hidden');
+
+      if (focusPhoto) {
+        var photoBox = document.getElementById('editPhotoSection');
+        if (photoBox) {
+          photoBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          photoBox.classList.add('ring-2', 'ring-primary');
+          setTimeout(function() {
+            photoBox.classList.remove('ring-2', 'ring-primary');
+          }, 1500);
+        }
+        var urlInput = document.getElementById('editProductImageUrl');
+        if (urlInput) urlInput.focus();
+      }
+    };
+
+    window.openAddProductModal = function() {
+      document.getElementById('editModalHeading').textContent = 'Tambah Produk Baru';
+      document.getElementById('editProductId').value = 'PRD-' + Date.now();
+      document.getElementById('editProductTitle').value = '';
+      document.getElementById('editProductCategory').value = 'Materi Digital';
+      document.getElementById('editProductSize').value = 'Direct Link';
+      document.getElementById('editProductUrl').value = 'https://drive.google.com';
+      document.getElementById('editProductDesc').value = '';
+      document.getElementById('editProductImageUrl').value = '';
+      window.handlePhotoUrlInput('');
+
+      document.getElementById('productEditModal').classList.remove('hidden');
+    };
+
+    window.closeEditModal = function() {
+      document.getElementById('productEditModal').classList.add('hidden');
+    };
+
+    /**
+     * Handlers Edit & Upload Foto Produk
+     */
+    window.handlePhotoUrlInput = function(val) {
+      var formatted = window.formatImageUrl(val);
+      var previewImg = document.getElementById('editPhotoPreviewImg');
+      var placeholder = document.getElementById('editPhotoPreviewPlaceholder');
+      if (formatted && previewImg) {
+        previewImg.src = formatted;
+        previewImg.classList.remove('hidden');
+        if (placeholder) placeholder.classList.add('hidden');
+      } else {
+        if (previewImg) {
+          previewImg.src = '';
+          previewImg.classList.add('hidden');
+        }
+        if (placeholder) placeholder.classList.remove('hidden');
+      }
+    };
+
+    /**
+     * Helper Kompresi & Pemotongan Presisi Rasio 16:9 (Maks 5 MB File Input)
+     */
+    window.processImageTo16x9 = function(file, callback) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var img = new Image();
+        img.onload = function() {
+          try {
+            var canvas = document.createElement('canvas');
+            var targetWidth = Math.min(img.width, 1280);
+            var targetHeight = Math.round(targetWidth * 9 / 16);
+            canvas.width = targetWidth;
+            canvas.height = targetHeight;
+            var ctx = canvas.getContext('2d');
+
+            var sourceWidth = img.width;
+            var sourceHeight = img.height;
+            var sourceAspect = sourceWidth / sourceHeight;
+            var targetAspect = 16 / 9;
+
+            var cropX = 0, cropY = 0, cropW = sourceWidth, cropH = sourceHeight;
+            if (sourceAspect > targetAspect) {
+              cropW = Math.round(sourceHeight * targetAspect);
+              cropX = Math.round((sourceWidth - cropW) / 2);
+            } else {
+              cropH = Math.round(sourceWidth / targetAspect);
+              cropY = Math.round((sourceHeight - cropH) / 2);
+            }
+
+            ctx.drawImage(img, cropX, cropY, cropW, cropH, 0, 0, targetWidth, targetHeight);
+            var optimizedBase64 = canvas.toDataURL('image/jpeg', 0.86);
+            callback(optimizedBase64);
+          } catch (err) {
+            callback(e.target.result);
+          }
+        };
+        img.onerror = function() {
+          callback(e.target.result);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    };
+
+    window.handlePhotoFileUpload = function(event) {
+      var file = event.target.files && event.target.files[0];
+      if (!file) return;
+      if (!file.type.match('image.*')) {
+        window.showToast('File harus berupa gambar (JPG/PNG/WEBP)!', 'error');
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        window.showToast('Ukuran file maksimal 5 MB!', 'error');
+        return;
+      }
+      window.processImageTo16x9(file, function(optimizedBase64) {
+        document.getElementById('editProductImageUrl').value = optimizedBase64;
+        window.handlePhotoUrlInput(optimizedBase64);
+        window.showToast('Foto produk (16:9) berhasil dimuat!', 'success');
+      });
+    };
+
+    window.resetProductPhoto = function() {
+      document.getElementById('editProductImageUrl').value = '';
+      var fileInput = document.getElementById('editProductFileInput');
+      if (fileInput) fileInput.value = '';
+      window.handlePhotoUrlInput('');
+      window.showToast('Cover di-reset ke ilustrasi 3D bawaan.', 'info');
+    };
+
+    window.handleSaveProduct = function(event) {
+      event.preventDefault();
+      var id = document.getElementById('editProductId').value;
+      var title = document.getElementById('editProductTitle').value.trim();
+      var category = document.getElementById('editProductCategory').value.trim();
+      var size = document.getElementById('editProductSize').value.trim();
+      var url = document.getElementById('editProductUrl').value.trim();
+      var desc = document.getElementById('editProductDesc').value.trim();
+      var imageUrl = window.formatImageUrl(document.getElementById('editProductImageUrl').value.trim());
+
+      var existingIndex = window.appState.products.findIndex(function(p) { return p.id === id; });
+      var targetProduct = null;
+
+      if (existingIndex >= 0) {
+        window.appState.products[existingIndex].title = title;
+        window.appState.products[existingIndex].category = category;
+        window.appState.products[existingIndex].size = size;
+        window.appState.products[existingIndex].url = url;
+        window.appState.products[existingIndex].desc = desc;
+        window.appState.products[existingIndex].imageUrl = imageUrl;
+        targetProduct = window.appState.products[existingIndex];
+      } else {
+        targetProduct = {
+          id: id,
+          order: window.appState.products.length + 1,
+          title: title,
+          category: category,
+          icon: 'inventory_2',
+          color: '#0D9488',
+          size: size,
+          url: url,
+          desc: desc,
+          active: true,
+          license: '100% Hak Jual',
+          imageUrl: imageUrl
+        };
+        window.appState.products.push(targetProduct);
+      }
+
+      localStorage.setItem('reseller_vault_products', JSON.stringify(window.appState.products));
+      window.renderProductCatalog();
+      window.renderAdminTable();
+      window.closeEditModal();
+      window.showToast('Produk & Foto berhasil disimpan!', 'success');
+
+      if (window.isGAS) {
+        google.script.run.saveProductItem(targetProduct, '12345');
+      }
+    };
+
+    /**
+     * Toast Helper Reusable
+     */
+    var toastTimeout = null;
+    window.showToast = function(msg, type) {
+      var toast = document.getElementById('toast-notification');
+      var toastMsg = document.getElementById('toastMessage');
+      var toastIcon = document.getElementById('toastIcon');
+      if (!toast) return;
+
+      toastMsg.textContent = msg;
+      if (type === 'error') {
+        toastIcon.textContent = 'error';
+        toastIcon.className = 'material-symbols-outlined text-[18px] text-disc-red';
+      } else if (type === 'info') {
+        toastIcon.textContent = 'info';
+        toastIcon.className = 'material-symbols-outlined text-[18px] text-secondary';
+      } else {
+        toastIcon.textContent = 'check_circle';
+        toastIcon.className = 'material-symbols-outlined text-[18px] text-primary';
+      }
+
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(function() {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 3000);
+    };
+
+    // Jalankan inisialisasi aman
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', window.initApp);
+    } else {
+      window.initApp();
+    }
+  </script>
+</body>
+</html>
+<!-- Generated by sangcreator GAS | By @sangcreator -->

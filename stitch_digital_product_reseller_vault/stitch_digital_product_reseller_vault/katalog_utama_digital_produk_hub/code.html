@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#e4ae00","on-background":"#c3ecd8","on-tertiary-container":"#622700","tertiary-fixed-dim":"#ffb690","primary-container":"#10b981","surface":"#00170f","on-primary-fixed-variant":"#005236","on-primary-fixed":"#002113","outline":"#86948a","inverse-surface":"#c3ecd8","text-on-light-muted":"#64748B","tag-mint-text":"#047857","error":"#ffb4ab","disc-teal":"#0D9488","disc-royal-blue":"#2563EB","on-primary":"#003824","on-primary-container":"#00422b","disc-red":"#EF4444","badge-orange-start":"#EA580C","disc-orange":"#F97316","canvas-gradient-end":"#9E7D05","surface-bright":"#1b4032","canvas-gradient-start":"#013827","disc-pink":"#EC4899","tertiary-container":"#ff7e2d","header-pine":"#01291D","on-surface":"#c3ecd8","badge-orange-end":"#F97316","surface-variant":"#163b2e","border-gold":"#EAB308","on-secondary-fixed":"#251a00","on-tertiary-fixed":"#341100","disc-emerald":"#10B981","card-surface-subtle":"#F8FAFC","on-tertiary":"#552100","error-container":"#93000a","secondary-fixed":"#ffdf9a","disc-sky":"#0284C7","primary-fixed-dim":"#4edea3","surface-tint":"#4edea3","secondary-fixed-dim":"#f7be1d","outline-variant":"#3c4a42","surface-container-highest":"#163b2e","on-secondary":"#3f2e00","surface-container-high":"#093024","tag-mint-bg":"#ECFDF5","tertiary":"#ffb690","inverse-on-surface":"#11372a","secondary":"#ffca45","inverse-primary":"#006c49","primary":"#4edea3","card-surface":"#FFFFFF","canvas-gradient-mid-1":"#064E3B","tertiary-fixed":"#ffdbca","surface-dim":"#00170f","on-error":"#690005","on-secondary-container":"#5b4400","surface-container-low":"#002116","canvas-gradient-mid-2":"#3F5509","on-surface-variant":"#bbcabf","on-secondary-fixed-variant":"#5a4300","on-error-container":"#ffdad6","primary-fixed":"#6ffbbe","background":"#00170f","surface-container-lowest":"#00120b","surface-container":"#00251a","text-on-light-primary":"#0F172A","on-tertiary-fixed-variant":"#783200","disc-purple":"#8B5CF6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.25rem","space-lg":"1.5rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-xl":"2rem","space-2xl":"3rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem",margin:"2rem"},fontFamily:{"label-md":["Outfit"],"headline-display-mobile":["Outfit"],"label-lg":["Outfit"],"headline-md":["Outfit"],"headline-display":["Outfit"],"body-sm":["Inter"],"headline-lg":["Outfit"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Outfit"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"700"}],"headline-display-mobile":["28px",{lineHeight:"34px",letterSpacing:"0.01em",fontWeight:"800"}],"label-lg":["14px",{lineHeight:"18px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"0",fontWeight:"700"}],"headline-display":["40px",{lineHeight:"48px",letterSpacing:"0.02em",fontWeight:"800"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"0.01em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"500"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"700"}]}}}};</script></head><body class="min-h-screen bg-[linear-gradient(145deg,#013827_0%,#064e3b_35%,#3f5509_70%,#9e7d05_100%)] text-on-surface font-body-md text-body-md antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-header-pine/90 backdrop-blur-xl border-b-2 border-border-gold rounded-b-[2.25rem] shadow-[0_12px_36px_rgba(0,0,0,0.55)]"><div class="h-28 max-w-7xl mx-auto px-gutter flex flex-col justify-between py-space-sm"><div class="flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-headline-lg text-headline-lg uppercase text-card-surface tracking-wider leading-none">DIGITAL PRODUK</span><span class="font-label-md text-label-md text-secondary leading-tight mt-0.5">Pelopor Produk Digital No 1</span></div><div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-badge-orange-start to-badge-orange-end text-card-surface font-label-md text-label-md uppercase shadow-[0_0_16px_rgba(249,115,22,0.45)]"><span class="material-symbols-outlined text-[16px]">verified_user</span><span>100% BISA DIJUAL KEMBALI</span></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><nav class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-gutter px-gutter md:mx-0 md:px-0" data-active-classes="bg-secondary text-header-pine font-label-lg rounded-full shadow-[0_2px_8px_rgba(234,179,8,0.3)]"><a class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="katalog-produk-hub" href="#">Katalog Produk (Hub)</a><a class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="lisensi-panduan-reseller" href="#">Lisensi &amp; Panduan Reseller</a><a class="px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors whitespace-nowrap" data-path="admin-manager-sheet-sync" href="#">Admin Manager (Sheet Sync)</a></nav></div></header><main class="w-full pt-28 max-w-7xl mx-auto px-gutter min-h-screen"><div class="flex flex-col w-full">
+<div class="relative w-full py-space-xl overflow-hidden">
+<div class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md w-fit mb-space-sm">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Sistem Distribusi Reseller Aktif</span>
+</div>
+<p class="font-headline-display text-headline-display text-card-surface uppercase tracking-tight">Koleksi Aset Digital Premium</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Akses instan ribuan materi siap edar, template komersial, dan hak cipta PLR/MRR legalitas penuh untuk monetisasi digital Anda.</p>
+</div>
+<div class="flex items-center gap-space-md shrink-0 bg-surface-container/70 p-space-md rounded-2xl backdrop-blur-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Database Version</span>
+<span class="font-headline-md text-headline-md text-card-surface">v4.8 - Instant Sync</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_done</span>
+</div>
+</div>
+</div>
+<!-- Sticky Discovery Filter Deck -->
+<div class="sticky top-28 z-30 flex flex-col gap-space-md p-space-md rounded-2xl bg-header-pine/85 backdrop-blur-xl shadow-2xl mb-space-xl">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative w-full lg:w-3/5 flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-text-on-light-muted pointer-events-none text-[20px]">search</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-full bg-card-surface text-text-on-light-primary font-body-md text-body-md placeholder:text-text-on-light-muted shadow-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="searchInput" oninput="handleSearch()" placeholder="Cari 12+ produk digital, template, worksheet..." type="text"/>
+</div>
+<!-- Metric Counter Pill -->
+<div class="flex items-center justify-between w-full lg:w-auto gap-space-md">
+<div class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-md text-label-md tracking-wider" id="counterBadge">12 Koleksi Siap Akses</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span>Cloud 10 Gbps</span>
+</div>
+</div>
+</div>
+<!-- Category Filter Pills Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none" id="categoryGroup">
+<button class="category-btn active px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-secondary text-header-pine shadow-md" onclick="filterCategory('Semua', this)">
+          Semua
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Mega Bundle', this)">
+          Mega Bundle
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Template Toko', this)">
+          Template Toko
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('E-Book', this)">
+          E-Book
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Worksheet Anak', this)">
+          Worksheet Anak
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Games Edukasi', this)">
+          Games Edukasi
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Aplikasi &amp; Coding', this)">
+          Aplikasi &amp; Coding
+        </button>
+<button class="category-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-card-surface hover:bg-surface-container-high" onclick="filterCategory('Komunitas &amp; Bahan', this)">
+          Komunitas &amp; Bahan
+        </button>
+</div>
+</div>
+<!-- Product Grid: 12 Elevated Pristine White Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-gutter items-stretch" id="productCatalogGrid">
+<!-- Card 1 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Mega Bundle" data-title="Promo Paket Mega Bundling">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-red text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Mega Bundle</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Promo Paket Mega Bundling</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Paket terlengkap se-Indonesia berisi master bundle e-course, template, asset desain, dan hak distribusi tak terbatas.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-emerald">link</span>
+<span class="truncate">digitalprodukno1seindonesia.my.id</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Promo Paket Mega Bundling', 'Mega Bundle', 'digitalprodukno1seindonesia.my.id', 'Paket terlengkap se-Indonesia berisi master bundle e-course, template, asset desain, dan hak distribusi tak terbatas. Dilengkapi marketing kit lengkap.', '12.4 GB')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="https://digitalprodukno1seindonesia.my.id" rel="noopener noreferrer" target="_blank">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Template Toko" data-title="Pro Growth Bundle Landing Page">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-purple text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Template Toko</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Pro Growth Bundle Landing Page</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Template Canva &amp; Elementor konversi tinggi untuk etalase jualan digital, biolink toko, dan presentasi sales pitch.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-purple">brush</span>
+<span class="truncate">Canva Direct Import Ecosystem</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Pro Growth Bundle Landing Page', 'Template Toko', 'Canva Shared Template', 'Template visual konversi tinggi kompatibel Canva Free &amp; Pro. Siap diedit 5 menit dan langsung dipublish sebagai website personal branding atau toko online.', '450+ Layout')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="E-Book" data-title="Paket Super Hemat 9 E-Book">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-pink text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">E-Book</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Paket Super Hemat 9 E-Book</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Kumpulan 9 buku digital fundamental strategi bisnis, copywriting persuasif, dan funneling otomatisasi reseller.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-pink">public</span>
+<span class="truncate">Google Sites Master Repository</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Paket Super Hemat 9 E-Book', 'E-Book', 'Google Sites Portal', 'Sembilan buku elektronik terlengkap dengan materi copywriting, paid traffic blueprint, dan organic growth. Berformat PDF resolusi tinggi siap baca &amp; jual.', '9 Master E-Books')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Aplikasi &amp; Coding" data-title="Paket 3 Coding">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-royal-blue text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Aplikasi &amp; Coding</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Paket 3 Coding</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Source code script web interaktif, landing page HTML5 modern, dan bot automasi produktivitas serbaguna.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-royal-blue">folder_code</span>
+<span class="truncate">Google Sites Developer Hub</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Paket 3 Coding', 'Aplikasi &amp; Coding', 'Google Sites / Code Vault', 'Tiga paket source code komplit terdiri dari web engine toko online ringan, kalkulator finansial interaktif, dan micro-tools siap deploy di hosting cPanel/Vercel.', '3 Core Projects')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Worksheet Anak" data-title="Paket 15000++ Worksheet Anak">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-teal text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Worksheet Anak</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Paket 15000++ Worksheet Anak</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Koleksi lembar kerja anak usia dini terlengkap: tracing, mewarnai, berhitung, logika, dan motorik halus.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-teal">cloud_download</span>
+<span class="truncate">Google Drive High-Speed Shared</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Paket 15000++ Worksheet Anak', 'Worksheet Anak', 'Google Drive Shared Cloud', 'Arsip raksasa 15.000+ lembar aktivitas PDF format A4. Dirancang khusus untuk guru PAUD/TK dan orang tua di rumah. Lisensi komersil cetak dan digital.', '18.2 GB')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Games Edukasi" data-title="20 Games Edukasi Anak">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-orange text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Games Edukasi</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">20 Games Edukasi Anak</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Game interaktif PowerPoint &amp; Web app untuk pengenalan huruf, angka, binatang, dan kuis visual interaktif.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-orange">gamepad</span>
+<span class="truncate">Google Sites Game Portal</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('20 Games Edukasi Anak', 'Games Edukasi', 'Google Sites / PPTX Portal', '20 permainan edukasi berbasis klik interaktif tanpa perlu install software rumit. Sangat disukai anak-anak dan menjadi best-seller di marketplace.', '20 Modul Game')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Games Edukasi" data-title="10 Games Edukasi Anak Muslim">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-emerald text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">mosque</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Games Edukasi</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">10 Games Edukasi Anak Muslim</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Media belajar islami interaktif meliputi doa harian, hijaiyah, wudhu, sholat, dan kisah teladan 25 nabi.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-emerald">auto_stories</span>
+<span class="truncate">Google Sites Islamic Edu</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('10 Games Edukasi Anak Muslim', 'Games Edukasi', 'Google Sites Media', 'Paket interaktif pendidikan karakter islami untuk balita &amp; anak SD tingkat dasar. Menghafal huruf hijaiyah dan rukun islam dengan grafis ramah anak.', '10 Modul Interaktif')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 8 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Komunitas &amp; Bahan" data-title="39000++ Media Anak Kreatif">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-sky text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">collections</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Media Kreatif</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">39000++ Media Anak Kreatif</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Clipart resolusi tinggi, ilustrasi vektor kartun, flashcards, dan template cetak stiker edukatif serbaguna.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-sky">cloud_done</span>
+<span class="truncate">Google Drive Dedicated Storage</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('39000++ Media Anak Kreatif', 'Media Kreatif', 'Google Drive Cloud', 'Mega-database file PNG transparan, vektor SVG, dan master PSD siap pakai untuk mencetak buku cerita, poster dinding belajar anak, hingga kaos.', '34.5 GB')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 9 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Worksheet Anak" data-title="1000++ Worksheet Islami">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">bookmark</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Worksheet Anak</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">1000++ Worksheet Islami</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Latihan menulis abjad Arab, mewarnai masjid, adab sehari-hari, dan puzzle tematik seputar sejarah Islam.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-primary">cloud_download</span>
+<span class="truncate">Google Drive Fast Sync</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('1000++ Worksheet Islami', 'Worksheet Anak', 'Google Drive Shared Hub', 'Lembar kerja siap cetak PDF dengan resolusi tajam 300 DPI. Cocok untuk program santri cilik, TPA, madrasah diniyah, maupun homeschooling muslim.', '3.8 GB')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 10 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Games Edukasi" data-title="Games Edukasi 8 Seri">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-header-pine flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">extension</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>100% Hak Jual</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Games Edukasi</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Games Edukasi 8 Seri</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Rangkaian 8 seri puzzle, tebak profesi, geografi dasar, dan matematika kilat dengan visual warna-warni ceria.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">videogame_asset</span>
+<span class="truncate">Google Sites Series Center</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Games Edukasi 8 Seri', 'Games Edukasi', 'Google Sites Arcade', 'Delapan paket berformat HTML offline dan PPT interaktif yang dapat langsung dioperasikan di smartphone Android, tablet, dan PC tanpa kuota internet setelah diunduh.', '8 Master Series')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 11 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Komunitas &amp; Bahan" data-title="WA Grup Komunitas &amp; Reseller">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-emerald text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+<span>Support Reseller</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Komunitas</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">WA Grup Komunitas &amp; Reseller</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Networking bersama 4.200+ pebisnis produk digital. Berbagi tips closing harian, update aset, dan diskusi strategi.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-emerald">chat</span>
+<span class="truncate">wa.me/invite/official-reseller-hub</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('WA Grup Komunitas &amp; Reseller', 'Komunitas &amp; Bahan', 'WhatsApp VIP Lounge', 'Komunitas eksklusif pembeli lisensi. Dibimbing cara menjalankan iklan Facebook/TikTok Ads organik, copy paste template teks penawaran, dan customer handling.', '4.200+ Anggota Aktif')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="https://wa.me/6281331661370" rel="noopener noreferrer" target="_blank">
+<span>Gabung Grup</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 12 -->
+<article class="product-item group flex flex-col justify-between bg-card-surface rounded-2xl p-space-lg text-text-on-light-primary shadow-xl hover:-translate-y-1.5 transition-all duration-300" data-cat="Komunitas &amp; Bahan" data-title="Cover &amp; Banner Promosi (Bahan Iklan)">
+<div class="flex flex-col">
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="w-12 h-12 rounded-full bg-disc-royal-blue text-card-surface flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">folder_special</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-disc-royal-blue/10 text-disc-royal-blue font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">campaign</span>
+<span>Bahan Iklan</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted mb-1">Aset Promosi</span>
+<h2 class="font-headline-md text-headline-md text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors">Cover &amp; Banner Promosi</h2>
+<p class="font-body-sm text-body-sm text-text-on-light-muted mt-2 line-clamp-2">Paket materi promosi siap pakai: 3D box mockups, banner feed Instagram, copywriting siap posting, dan video teaser.</p>
+</div>
+<div class="flex flex-col mt-space-lg pt-space-md bg-card-surface-subtle -mx-space-lg -mb-space-lg px-space-lg pb-space-lg rounded-b-2xl">
+<div class="flex items-center gap-1.5 text-text-on-light-muted font-body-sm text-body-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px] text-disc-royal-blue">auto_awesome</span>
+<span class="truncate">Google Drive Marketing Assets</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="showModal('Cover &amp; Banner Promosi', 'Komunitas &amp; Bahan', 'Google Drive Assets Drive', 'Amunisi promosi siap pakai untuk langsung jualan detik ini juga. Dilengkapi 100+ template mockup produk 3D realistis, copywriting headline teruji, dan panduan upload marketplace.', '6.7 GB Media Kit')">
+              Detail Info
+            </button>
+<a class="w-full py-2.5 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-md transition-all flex items-center justify-center gap-1" href="#">
+<span>Buka Akses</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Quick Stats Banner -->
+<div class="mt-space-2xl grid grid-cols-1 md:grid-cols-3 gap-space-md bg-header-pine/80 backdrop-blur-md rounded-2xl p-space-lg shadow-2xl">
+<div class="flex items-center gap-space-md p-space-sm">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[32px]">folder_zip</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-card-surface leading-none">50.000+</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-1">Total Aset File Siap Pakai</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-sm">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[32px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-card-surface leading-none">100% Legal</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-1">Commercial Resell Rights (PLR/MRR)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-sm">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[32px]">cloud_sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-card-surface leading-none">Akses Selamanya</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-1">Instant Google Drive &amp; Update Rutin</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Information Modal Simulation -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-surface-container-lowest/80 backdrop-blur-md p-space-md" id="detailModal">
+<div class="relative w-full max-w-lg bg-card-surface rounded-3xl p-space-xl shadow-2xl text-text-on-light-primary transform transition-all duration-300 scale-95 opacity-0" id="modalCard">
+<div class="flex items-start justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-text-on-light-muted" id="modalCategory">Kategori</span>
+<h3 class="font-headline-lg text-headline-lg text-text-on-light-primary mt-0.5" id="modalTitle">Nama Produk</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-card-surface-subtle hover:bg-surface-container flex items-center justify-center text-text-on-light-muted hover:text-text-on-light-primary transition-colors" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md bg-card-surface-subtle rounded-2xl mb-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-text-on-light-muted">
+<span>Penyimpanan / Format:</span>
+<span class="font-label-md text-label-md text-header-pine truncate max-w-[200px]" id="modalLocation">Cloud Repository</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-text-on-light-muted">
+<span>Kapasitas File / Volume:</span>
+<span class="font-label-md text-label-md text-tag-mint-text" id="modalSize">Multi Gigabytes</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-on-light-muted mb-space-lg leading-relaxed" id="modalDesc">
+        Deskripsi lengkap aset digital serta instruksi pemanfaatan lisensi reseller untuk omset tak terbatas.
+      </p>
+<div class="flex items-center gap-space-sm">
+<button class="w-1/2 py-3 rounded-xl bg-card-surface-subtle hover:bg-surface-container text-text-on-light-primary font-label-md text-label-md transition-colors" onclick="closeModal()">
+          Tutup
+        </button>
+<a class="w-1/2 py-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-card-surface font-label-md text-label-md text-center shadow-lg transition-all flex items-center justify-center gap-1.5" href="https://digitalprodukno1seindonesia.my.id" id="modalActionBtn" rel="noopener noreferrer" target="_blank">
+<span>Buka Direct Drive</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+    let currentCategory = 'Semua';
+
+    function filterCategory(category, element) {
+      currentCategory = category;
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-secondary', 'text-header-pine', 'shadow-md');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+
+      element.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      element.classList.add('bg-secondary', 'text-header-pine', 'shadow-md');
+
+      applyFilters();
+    }
+
+    function handleSearch() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const items = document.querySelectorAll('.product-item');
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const title = item.getAttribute('data-title').toLowerCase();
+        const cat = item.getAttribute('data-cat');
+        const matchesCategory = (currentCategory === 'Semua') || (cat === currentCategory);
+        const matchesQuery = title.includes(query) || cat.toLowerCase().includes(query);
+
+        if (matchesCategory && matchesQuery) {
+          item.style.display = 'flex';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      const badge = document.getElementById('counterBadge');
+      badge.textContent = `${visibleCount} Koleksi Siap Akses`;
+    }
+
+    function showModal(title, category, location, desc, size) {
+      const modal = document.getElementById('detailModal');
+      const card = document.getElementById('modalCard');
+
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalCategory').textContent = category;
+      document.getElementById('modalLocation').textContent = location;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalSize').textContent = size;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      setTimeout(() => {
+        card.classList.remove('scale-95', 'opacity-0');
+        card.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('detailModal');
+      const card = document.getElementById('modalCard');
+
+      card.classList.remove('scale-100', 'opacity-100');
+      card.classList.add('scale-95', 'opacity-0');
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 200);
+    }
+  </script>
+</div></main><aside class="fixed bottom-6 right-6 z-40"><a class="flex items-center gap-space-sm bg-primary-container hover:bg-disc-emerald text-card-surface px-5 py-3.5 rounded-full font-label-lg text-label-lg shadow-[0_12px_30px_rgba(16,185,129,0.4)] transition-all transform hover:scale-105 active:scale-95" href="https://wa.me/6281331661370" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-card-surface opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-card-surface"></span></span><span>Hubungi Admin WA (+6281331661370)</span></a></aside><footer class="w-full bg-header-pine/90 backdrop-blur-md border-t border-outline-variant py-space-xl mt-space-2xl"><div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><div class="flex flex-col"><span class="font-label-lg text-label-lg text-card-surface uppercase tracking-wide">Digital Produk Vault</span><span class="font-body-sm text-body-sm text-on-surface-variant mt-1">© 2024 Pelopor Produk Digital No 1. Seluruh Hak Cipta Dilindungi.</span></div><div class="flex items-center gap-space-sm bg-surface-container-high px-4 py-2 rounded-full border border-border-gold/30"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Status Terverifikasi: 100% Hak Jual Kembali (PLR / MRR)</span></div></div></footer></body></html>
