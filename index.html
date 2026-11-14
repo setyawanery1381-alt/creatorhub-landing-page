@@ -270,6 +270,10 @@
         <button onclick="window.navigateTo('view-katalog')" data-target="view-katalog" class="nav-tab active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition">
           Katalog Produk (Hub)
         </button>
+        <button onclick="window.navigateTo('view-berkas')" data-target="view-berkas" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[15px] text-secondary">folder_special</span>
+          <span>Eksplor Berkas (In-App)</span>
+        </button>
         <button onclick="window.navigateTo('view-lisensi')" data-target="view-lisensi" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap">
           Lisensi & Panduan Reseller
         </button>
@@ -404,6 +408,100 @@
         <h3 class="font-headline text-lg font-bold text-white mt-2">Produk Tidak Ditemukan</h3>
         <p class="text-xs text-on-surface-variant mt-1">Coba gunakan kata kunci pencarian yang lain.</p>
       </div>
+    </section>
+
+    <!-- ================= VIEW: EKSPLOR BERKAS & WORKSHEET (IN-APP DIRECT VIEWER) ================= -->
+    <section id="view-berkas" class="hidden flex-col w-full pb-16">
+      
+      <!-- Top Header & Banner In-App Explorer -->
+      <div class="mb-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-surface-container-high/95 via-surface-container/95 to-surface-container-high/95 border-2 border-border-gold/50 shadow-2xl backdrop-blur-md relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-56 h-56 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-secondary text-[11px] font-bold uppercase tracking-wider mb-2.5">
+              <span class="material-symbols-outlined text-[15px]">auto_stories</span>
+              <span>In-App Direct Document Viewer • Tanpa Buka Google Drive</span>
+            </div>
+            <h2 class="font-headline text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Eksplor Lembar Kerja & Berkas Mentah Per Folder
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Semua materi lembar kerja anak, worksheet islami, game, dan modul digital telah dikelompokkan rapi per seri. 
+              <strong>Klik kartu mana saja untuk melihat lembar kerja langsung di layar Anda</strong>—bisa langsung dipelajari, dicetak, atau diunduh tanpa perlu berpindah aplikasi!
+            </p>
+          </div>
+          
+          <div class="flex flex-wrap md:flex-col gap-2 shrink-0 text-[11px]">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-emerald-300">
+              <span class="material-symbols-outlined text-[16px]">visibility</span>
+              <span>0ms Preview Dokumen In-App</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-secondary">
+              <span class="material-symbols-outlined text-[16px]">print</span>
+              <span>Bisa Langsung Dicetak (Print)</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-cyan-300">
+              <span class="material-symbols-outlined text-[16px]">stay_current_portrait</span>
+              <span>Optimal & Full Gambar di HP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search & Folder Tabs Navigation -->
+      <div class="mb-6 flex flex-col gap-3">
+        <!-- Live Instant Search Bar for Files -->
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+          <input 
+            type="text" 
+            id="berkasSearchInput" 
+            oninput="window.handleBerkasSearch()" 
+            placeholder="Ketik judul seri berkas (contoh: Alfabet, Angka, Hijaiyah, Hewan, Labirin)..." 
+            class="w-full pl-12 pr-4 py-3 rounded-2xl bg-surface-container border border-white/10 text-white placeholder:text-on-surface-variant text-xs sm:text-sm focus:outline-none focus:border-secondary transition shadow-inner"
+          />
+        </div>
+
+        <!-- Folder Filter Pills -->
+        <div class="flex items-center justify-between gap-3 overflow-x-auto pb-1" id="berkasFolderPillsContainer">
+          <div class="flex items-center gap-2 overflow-x-auto pb-1" id="berkasFolderPills">
+            <button onclick="window.filterBerkasFolder('Semua', this)" class="berkas-pill active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition">
+              Semua Berkas
+            </button>
+            <button onclick="window.filterBerkasFolder('worksheet-anak', this)" class="berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">
+              🎨 15.000++ Worksheet Anak
+            </button>
+            <button onclick="window.filterBerkasFolder('worksheet-islami', this)" class="berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">
+              🕌 1.000++ Worksheet Islami
+            </button>
+            <button onclick="window.filterBerkasFolder('flash-card', this)" class="berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">
+              🗂️ Flash Card Edukasi
+            </button>
+            <button onclick="window.filterBerkasFolder('games-edukasi', this)" class="berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">
+              🎮 Games Interaktif
+            </button>
+            <button onclick="window.filterBerkasFolder('ebook-modul', this)" class="berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition">
+              📚 E-Book & Modul Panduan
+            </button>
+          </div>
+          <span id="berkasCountBadge" class="hidden sm:inline-block px-3 py-1 rounded-full bg-surface-container-high text-secondary text-[11px] font-bold shrink-0 border border-secondary/30">
+            20 Berkas Siap Tampil
+          </span>
+        </div>
+      </div>
+
+      <!-- Grid Berkas Visual Full Gambar -->
+      <div id="berkasGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <!-- Empty State Berkas -->
+      <div id="berkasEmptyState" class="hidden text-center py-16 bg-surface-container/50 rounded-2xl border border-white/10 mt-4">
+        <span class="material-symbols-outlined text-[48px] text-secondary">search_off</span>
+        <h3 class="font-headline text-lg font-bold text-white mt-2">Berkas Tidak Ditemukan</h3>
+        <p class="text-xs text-on-surface-variant mt-1">Coba gunakan kata kunci pencarian yang lain.</p>
+      </div>
+
     </section>
 
     <!-- ================= VIEW 2: LISENSI & PANDUAN RESELLER ================= -->
@@ -1148,6 +1246,133 @@
     </div>
   </div>
 
+  <!-- ================= IN-APP DOCUMENT / WORKSHEET VIEWER MODAL ================= -->
+  <div id="inAppViewerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-header-pine/90 backdrop-blur-md">
+    <div class="absolute inset-0" onclick="window.closeInAppViewer()"></div>
+    <div class="relative z-10 w-full max-w-5xl h-[94vh] max-h-[880px] bg-slate-900 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-white/20 flex flex-col overflow-hidden text-white">
+      
+      <!-- Top Window Header -->
+      <div class="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-slate-950/80 border-b border-white/10 shrink-0">
+        <div class="flex items-center gap-3 truncate pr-2">
+          <button 
+            type="button" 
+            onclick="window.closeInAppViewer()" 
+            class="flex items-center gap-1 text-slate-300 hover:text-white px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-xs font-bold transition shrink-0"
+          >
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            <span class="hidden sm:inline">Kembali</span>
+          </button>
+          
+          <div class="truncate">
+            <div class="flex items-center gap-2 truncate">
+              <span id="inAppViewerTypeBadge" class="px-2 py-0.5 rounded-full bg-secondary text-header-pine text-[10px] font-extrabold uppercase shrink-0">
+                PDF Lembar Kerja
+              </span>
+              <h3 id="inAppViewerTitle" class="font-headline text-sm sm:text-base font-bold text-white truncate">
+                Judul Berkas Dokumen
+              </h3>
+            </div>
+            <p id="inAppViewerSub" class="text-[11px] text-slate-400 truncate mt-0.5 hidden sm:block">
+              In-App Document Viewer • Bisa langsung dicetak atau diunduh
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <a 
+            id="inAppOpenNewTabBtn" 
+            href="#" 
+            target="_blank" 
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center transition"
+            title="Buka di Tab Baru"
+          >
+            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+          </a>
+          <button 
+            type="button" 
+            onclick="window.closeInAppViewer()" 
+            class="w-8 h-8 rounded-full bg-rose-500/20 hover:bg-rose-500/40 text-rose-300 flex items-center justify-center transition"
+            title="Tutup Pratinjau"
+          >
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Viewer Area with Skeleton Loader -->
+      <div class="relative flex-1 bg-slate-950 overflow-hidden flex items-center justify-center">
+        
+        <!-- Loading Skeleton Indicator -->
+        <div id="inAppViewerLoader" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-950/90 text-white gap-3 transition-opacity duration-300">
+          <div class="w-10 h-10 border-4 border-secondary border-t-transparent rounded-full animate-spin"></div>
+          <span class="text-xs font-bold text-slate-300">Memuat lembar kerja di dalam aplikasi...</span>
+        </div>
+
+        <!-- PDF & Document Frame Embed -->
+        <iframe 
+          id="inAppViewerIframe" 
+          src="" 
+          class="w-full h-full border-0 bg-white" 
+          allow="autoplay; fullscreen"
+          onload="window.handleInAppViewerLoaded()"
+        ></iframe>
+
+        <!-- High-Res Image Box Fallback -->
+        <div id="inAppViewerImgBox" class="hidden absolute inset-0 w-full h-full flex items-center justify-center p-4 bg-slate-950 overflow-auto">
+          <img id="inAppViewerImg" src="" class="max-h-full max-w-full object-contain rounded-xl shadow-2xl" alt="Preview Gambar" />
+        </div>
+      </div>
+
+      <!-- Bottom Action Dock Bar -->
+      <div class="px-4 sm:px-6 py-3.5 bg-slate-950/90 border-t border-white/10 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 shrink-0">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <a 
+            id="inAppDownloadBtn" 
+            href="#" 
+            target="_blank" 
+            download
+            class="flex-1 sm:flex-initial py-2.5 px-4 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md"
+          >
+            <span class="material-symbols-outlined text-[18px]">cloud_download</span>
+            <span>Unduh File Asli</span>
+          </a>
+          <button 
+            type="button" 
+            onclick="window.printInAppDoc()" 
+            class="py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/15 text-xs font-bold transition flex items-center justify-center gap-1.5"
+            title="Cetak lembar kerja ini"
+          >
+            <span class="material-symbols-outlined text-[18px]">print</span>
+            <span>Cetak / Print</span>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+          <a 
+            id="inAppWaShareBtn" 
+            href="#" 
+            target="_blank" 
+            class="flex-1 sm:flex-initial py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow"
+            title="Tanyakan ke WhatsApp"
+          >
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>Tanya via WhatsApp</span>
+          </a>
+          <button 
+            type="button" 
+            onclick="window.copyInAppViewerLink()" 
+            class="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white text-xs font-bold transition flex items-center justify-center gap-1"
+            title="Salin Tautan Berkas"
+          >
+            <span class="material-symbols-outlined text-[16px]">content_copy</span>
+            <span class="hidden sm:inline">Salin Link</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ================= ADD / EDIT PRODUCT MODAL ================= -->
   <div id="productEditModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-header-pine/85 backdrop-blur-md">
     <div class="absolute inset-0" onclick="window.closeEditModal()"></div>
@@ -1446,6 +1671,7 @@
 
       window.applyConfigToUI();
       window.renderProductCatalog();
+      window.renderBerkasCatalog();
       window.renderAdminTable();
 
       // Sinkronisasi Live dengan Backend Google Apps Script (Bila Ada)
@@ -1476,7 +1702,7 @@
     window.navigateTo = function(targetSectionId) {
       window.appState.currentView = targetSectionId;
 
-      var sections = ['view-katalog', 'view-lisensi', 'view-admin', 'view-member-store'];
+      var sections = ['view-katalog', 'view-berkas', 'view-lisensi', 'view-admin', 'view-member-store'];
       sections.forEach(function(sId) {
         var el = document.getElementById(sId);
         if (el) {
@@ -1500,7 +1726,497 @@
         }
       });
 
+      if (targetSectionId === 'view-berkas') {
+        window.renderBerkasCatalog();
+      }
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    /**
+     * DATABASE BERKAS DIGITAL TERSUSUN PER FOLDER (In-App Document Viewer)
+     */
+    window.activeBerkasFolder = 'Semua';
+    window.berkasSearchQuery = '';
+
+    window.berkasDatabase = [
+      // FOLDER 1: 15.000++ Worksheet Anak
+      {
+        id: 'WS-01',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 01: Tracing Alfabet & Huruf A-Z Siap Cetak',
+        type: 'pdf',
+        pages: '26 Halaman PDF',
+        desc: 'Latihan menebalkan huruf besar dan kecil A s/d Z dilengkapi ilustrasi kartun lucu ramah anak usia 3-6 tahun.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1TR3hW6Ta8EW6JM1tsCQ7rFKMreN8O-rH',
+        previewUrl: 'https://drive.google.com/file/d/1TR3hW6Ta8EW6JM1tsCQ7rFKMreN8O-rH/preview',
+        downloadUrl: 'https://drive.google.com/uc?export=download&id=1TR3hW6Ta8EW6JM1tsCQ7rFKMreN8O-rH'
+      },
+      {
+        id: 'WS-02',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 02: Belajar Angka & Menghitung 1-20 Ceria',
+        type: 'pdf',
+        pages: '30 Halaman PDF',
+        desc: 'Modul belajar menulis angka 1-20, mencocokkan jumlah benda dengan simbol, dan penjumlahan visual interaktif.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1UT6VdkjsW9-suNpMsb3cowtFpxT04Pe-',
+        previewUrl: 'https://drive.google.com/file/d/1UT6VdkjsW9-suNpMsb3cowtFpxT04Pe-/preview',
+        downloadUrl: 'https://drive.google.com/uc?export=download&id=1UT6VdkjsW9-suNpMsb3cowtFpxT04Pe-'
+      },
+      {
+        id: 'WS-03',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 03: Labirin & Asah Logika Motorik Anak',
+        type: 'pdf',
+        pages: '24 Halaman PDF',
+        desc: 'Permainan petualangan maze/labirin seru melatih konsentrasi, daya ingat, dan koordinasi motorik halus.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        previewUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        downloadUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2'
+      },
+      {
+        id: 'WS-04',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 04: Mewarnai Dunia Hewan & Satwa Liar',
+        type: 'pdf',
+        pages: '35 Halaman PDF',
+        desc: 'Koleksi lembar mewarnai hewan darat, laut, dan udara dengan outline garis tebal ramah pensil warna & krayon.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        previewUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        downloadUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2'
+      },
+      {
+        id: 'WS-05',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 05: Gunting & Tempel Bentuk Geometri Kreatif',
+        type: 'pdf',
+        pages: '20 Halaman PDF',
+        desc: 'Aktivitas sensorik motorik memotong pola lingkaran, segitiga, persegi lalu menempel menjadi robot & roket.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        previewUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        downloadUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2'
+      },
+      {
+        id: 'WS-06',
+        folderId: 'worksheet-anak',
+        folderName: '15.000++ Worksheet Anak',
+        title: 'Seri 06: Belajar Menulis Garis & Pola Dasar (Pra-Menulis)',
+        type: 'pdf',
+        pages: '15 Halaman PDF',
+        desc: 'Latihan garis lurus, zig-zag, lengkung, dan gelombang mempersiapkan kelenturan jemari anak sebelum menulis.',
+        thumbnail: '',
+        visualId: 'PRD-05',
+        fileId: '1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        previewUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2',
+        downloadUrl: 'https://drive.google.com/drive/folders/1BNRtr4nRGlQxtGUMX4YrWA5rFZ2TrEL2'
+      },
+
+      // FOLDER 2: 1.000++ Worksheet Islami
+      {
+        id: 'WSI-01',
+        folderId: 'worksheet-islami',
+        folderName: '1.000++ Worksheet Islami',
+        title: 'Seri 07: Tracing Huruf Hijaiyah Alif s/d Ya Lengkap',
+        type: 'pdf',
+        pages: '28 Halaman PDF',
+        desc: 'Menebalkan 28 huruf hijaiyah berharakat fathah, kasrah, dhammah dengan ilustrasi islami.',
+        thumbnail: '',
+        visualId: 'PRD-09',
+        fileId: '1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN',
+        previewUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing',
+        downloadUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing'
+      },
+      {
+        id: 'WSI-02',
+        folderId: 'worksheet-islami',
+        folderName: '1.000++ Worksheet Islami',
+        title: 'Seri 08: Mengenal Rukun Islam & Rukun Iman Bergambar',
+        type: 'pdf',
+        pages: '15 Halaman PDF',
+        desc: 'Lembar kerja interaktif memahami 5 rukun islam dan 6 rukun iman dengan visual kartun muslim.',
+        thumbnail: '',
+        visualId: 'PRD-09',
+        fileId: '1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN',
+        previewUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing',
+        downloadUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing'
+      },
+      {
+        id: 'WSI-03',
+        folderId: 'worksheet-islami',
+        folderName: '1.000++ Worksheet Islami',
+        title: 'Seri 09: Mewarnai Kaligrafi Arab & Masjid Megah',
+        type: 'pdf',
+        pages: '25 Halaman PDF',
+        desc: 'Lembar mewarnai kaligrafi asmaul husna, masjid nabawi, masjidil haram, dan ornamen islami elegan.',
+        thumbnail: '',
+        visualId: 'PRD-09',
+        fileId: '1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN',
+        previewUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing',
+        downloadUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing'
+      },
+      {
+        id: 'WSI-04',
+        folderId: 'worksheet-islami',
+        folderName: '1.000++ Worksheet Islami',
+        title: 'Seri 10: Doa Sehari-Hari & Adab Anak Shalih',
+        type: 'pdf',
+        pages: '20 Halaman PDF',
+        desc: 'Doa makan, tidur, keluar rumah, masuk masjid, dan adab menghormati orang tua dengan ilustrasi menyejukkan.',
+        thumbnail: '',
+        visualId: 'PRD-09',
+        fileId: '1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN',
+        previewUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing',
+        downloadUrl: 'https://drive.google.com/drive/folders/1B9k8lSlHZXhrmegfGKj8arpWZxiZ4sPN?usp=sharing'
+      },
+
+      // FOLDER 3: Flash Card Edukasi
+      {
+        id: 'FC-01',
+        folderId: 'flash-card',
+        folderName: 'Flash Card Edukasi',
+        title: 'Seri 11: Flash Card Buah & Sayur 3D Dwibahasa',
+        type: 'pdf',
+        pages: '48 Kartu Siap Cetak',
+        desc: 'Kartu flashcard dwibahasa (Indonesia - Inggris) dengan visual 3D realistis siap digunting dan dilaminasi.',
+        thumbnail: '',
+        visualId: 'PRD-08',
+        fileId: '1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue',
+        previewUrl: 'https://drive.google.com/drive/folders/1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue?usp=drive_link',
+        downloadUrl: 'https://drive.google.com/drive/folders/1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue?usp=drive_link'
+      },
+      {
+        id: 'FC-02',
+        folderId: 'flash-card',
+        folderName: 'Flash Card Edukasi',
+        title: 'Seri 12: Flash Card Hewan & Habitat Alam Liar',
+        type: 'pdf',
+        pages: '50 Kartu Edukasi',
+        desc: 'Mengenal satwa jinak dan liar beserta pengucapan suara fonik anak usia emas (golden age).',
+        thumbnail: '',
+        visualId: 'PRD-08',
+        fileId: '1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue',
+        previewUrl: 'https://drive.google.com/drive/folders/1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue?usp=drive_link',
+        downloadUrl: 'https://drive.google.com/drive/folders/1xsQ7LMcDhzeIsjdnAJ3XbKW8IO72G8ue?usp=drive_link'
+      },
+
+      // FOLDER 4: Games Interaktif
+      {
+        id: 'GM-01',
+        folderId: 'games-edukasi',
+        folderName: 'Games Interaktif',
+        title: 'Game 01: Tebak Suara Hewan & Petualangan Rimba',
+        type: 'game',
+        pages: 'HTML5 Web Game',
+        desc: 'Permainan interaktif langsung di layar ponsel tanpa instalasi, melatih pendengaran dan asosiasi visual.',
+        thumbnail: '',
+        visualId: 'PRD-06',
+        fileId: '',
+        previewUrl: 'https://sites.google.com/view/game-edukasi-2',
+        downloadUrl: 'https://sites.google.com/view/game-edukasi-2'
+      },
+      {
+        id: 'GM-02',
+        folderId: 'games-edukasi',
+        folderName: 'Games Interaktif',
+        title: 'Game 02: Kuis Hijaiyah Cepat Tanggap Muslim',
+        type: 'game',
+        pages: 'HTML5 Web Game',
+        desc: 'Game edukasi islami mengasah kecepatan mengingat huruf hijaiyah dengan skor dan musik ceria.',
+        thumbnail: '',
+        visualId: 'PRD-07',
+        fileId: '',
+        previewUrl: 'https://sites.google.com/view/gameedukasianakmuslim',
+        downloadUrl: 'https://sites.google.com/view/gameedukasianakmuslim'
+      },
+
+      // FOLDER 5: E-Book & Modul Panduan
+      {
+        id: 'EB-01',
+        folderId: 'ebook-modul',
+        folderName: 'E-Book & Modul Panduan',
+        title: 'Modul 01: Panduan Sukses Monetisasi Produk Digital PLR',
+        type: 'pdf',
+        pages: 'E-Book 65 Halaman',
+        desc: 'Langkah taktis menjual kembali ribuan aset digital dengan profit 100% tanpa perlu modal barang fisik.',
+        thumbnail: '',
+        visualId: 'PRD-03',
+        fileId: '',
+        previewUrl: 'https://sites.google.com/view/paket-ebook-sangcreator/halaman-muka',
+        downloadUrl: 'https://sites.google.com/view/paket-ebook-sangcreator/halaman-muka'
+      },
+      {
+        id: 'EB-02',
+        folderId: 'ebook-modul',
+        folderName: 'E-Book & Modul Panduan',
+        title: 'Modul 02: Tutorial Membangun Etalase Toko Canva & Biolink',
+        type: 'pdf',
+        pages: 'E-Book & Template',
+        desc: 'Cara menyulap template Canva menjadi landing page jualan online yang estetik dan otomatis closing.',
+        thumbnail: '',
+        visualId: 'PRD-02',
+        fileId: '',
+        previewUrl: 'https://sangcreator.my.canva.site/c3wht4nzam1rpg0r',
+        downloadUrl: 'https://sangcreator.my.canva.site/c3wht4nzam1rpg0r'
+      }
+    ];
+
+    /**
+     * Render Katalog Berkas Digital (Folder Explorer In-App)
+     */
+    window.renderBerkasCatalog = function() {
+      var grid = document.getElementById('berkasGrid');
+      var empty = document.getElementById('berkasEmptyState');
+      var badge = document.getElementById('berkasCountBadge');
+      if (!grid) return;
+
+      var q = (window.berkasSearchQuery || '').toLowerCase().trim();
+      var folder = window.activeBerkasFolder || 'Semua';
+
+      var filtered = window.berkasDatabase.filter(function(b) {
+        var matchFolder = (folder === 'Semua') || (b.folderId === folder);
+        var matchSearch = !q || 
+          (b.title && b.title.toLowerCase().indexOf(q) !== -1) ||
+          (b.desc && b.desc.toLowerCase().indexOf(q) !== -1) ||
+          (b.folderName && b.folderName.toLowerCase().indexOf(q) !== -1);
+        return matchFolder && matchSearch;
+      });
+
+      if (badge) badge.textContent = filtered.length + ' Berkas Siap Tampil';
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        if (empty) empty.classList.remove('hidden');
+        return;
+      }
+
+      if (empty) empty.classList.add('hidden');
+
+      var html = '';
+      for (var i = 0; i < filtered.length; i++) {
+        var item = filtered[i];
+        var safeTitle = String(item.title).replace(/'/g, "\\'");
+        var safeType = String(item.type || 'pdf');
+        var safeFileId = String(item.fileId || '');
+        var safeDownloadUrl = String(item.downloadUrl || '#').replace(/'/g, "\\'");
+        var safePreviewUrl = String(item.previewUrl || '#').replace(/'/g, "\\'");
+        
+        var visual3D = window.getPixarSvgById(item.visualId || 'PRD-05', item.title);
+
+        var typeBadge = (item.type === 'game') ? '🎮 Web Game' : (item.type === 'image' ? '🖼️ Aset Grafis' : '📄 PDF Siap Cetak');
+        var typeBadgeClass = (item.type === 'game') ? 'bg-orange-100 text-orange-800' : 'bg-emerald-100 text-emerald-800';
+
+        html += `
+          <article class="product-card group text-text-on-light-primary overflow-hidden shadow-lg border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+            <!-- 3D Pixar Visual Header -->
+            <div class="card-visual-header cursor-pointer" onclick="window.openInAppViewer('${safeFileId}', '${safeTitle}', '${safeType}', '${safeDownloadUrl}', '${safePreviewUrl}')">
+              ${visual3D}
+              <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="px-3.5 py-1.5 rounded-full bg-white/95 text-slate-900 font-bold text-xs shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                  <span class="material-symbols-outlined text-[16px] text-disc-emerald">visibility</span>
+                  <span>Buka Lembar Kerja</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-text-on-light-muted truncate max-w-[140px]">
+                    ${item.folderName}
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full ${typeBadgeClass} text-[10px] font-bold shrink-0">
+                    ${typeBadge}
+                  </span>
+                </div>
+
+                <h3 
+                  onclick="window.openInAppViewer('${safeFileId}', '${safeTitle}', '${safeType}', '${safeDownloadUrl}', '${safePreviewUrl}')"
+                  class="font-headline text-sm font-bold text-text-on-light-primary leading-snug group-hover:text-header-pine transition-colors line-clamp-2 cursor-pointer"
+                >
+                  ${item.title}
+                </h3>
+                <p class="text-xs text-text-on-light-muted mt-1.5 line-clamp-2 leading-relaxed">
+                  ${item.desc}
+                </p>
+              </div>
+
+              <div class="flex flex-col mt-4 pt-3 border-t border-slate-100">
+                <div class="flex items-center justify-between text-[11px] text-text-on-light-muted mb-3">
+                  <span class="flex items-center gap-1 font-semibold text-slate-600">
+                    <span class="material-symbols-outlined text-[15px] text-disc-emerald">description</span>
+                    <span>${item.pages || 'Siap Cetak'}</span>
+                  </span>
+                  <span class="font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">In-App View</span>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2">
+                  <button 
+                    type="button"
+                    onclick="window.openInAppViewer('${safeFileId}', '${safeTitle}', '${safeType}', '${safeDownloadUrl}', '${safePreviewUrl}')"
+                    class="w-full py-2 px-2.5 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold text-center shadow transition flex items-center justify-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-[15px]">visibility</span>
+                    <span>Lihat Isi</span>
+                  </button>
+                  <a 
+                    href="${item.downloadUrl}" 
+                    target="_blank" 
+                    download
+                    class="w-full py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition text-center flex items-center justify-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-[15px]">cloud_download</span>
+                    <span>Unduh</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      grid.innerHTML = html;
+    };
+
+    window.filterBerkasFolder = function(folderId, btnEl) {
+      window.activeBerkasFolder = folderId;
+      var pills = document.querySelectorAll('.berkas-pill');
+      pills.forEach(function(p) {
+        p.className = 'berkas-pill px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-surface-container text-on-surface-variant hover:text-white transition';
+      });
+      if (btnEl) {
+        btnEl.className = 'berkas-pill active px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-secondary text-header-pine shadow-md transition';
+      }
+      window.renderBerkasCatalog();
+    };
+
+    var berkasSearchTimer = null;
+    window.handleBerkasSearch = function() {
+      clearTimeout(berkasSearchTimer);
+      berkasSearchTimer = setTimeout(function() {
+        var input = document.getElementById('berkasSearchInput');
+        window.berkasSearchQuery = input ? input.value : '';
+        window.renderBerkasCatalog();
+      }, 150);
+    };
+
+    /**
+     * IN-APP DOCUMENT / WORKSHEET VIEWER CONTROLLER
+     */
+    var currentInAppViewerDownloadUrl = '#';
+    var currentInAppViewerPreviewUrl = '#';
+
+    window.openInAppViewer = function(fileId, title, type, downloadUrl, previewUrl) {
+      var modal = document.getElementById('inAppViewerModal');
+      var titleEl = document.getElementById('inAppViewerTitle');
+      var badgeEl = document.getElementById('inAppViewerTypeBadge');
+      var iframe = document.getElementById('inAppViewerIframe');
+      var imgBox = document.getElementById('inAppViewerImgBox');
+      var imgEl = document.getElementById('inAppViewerImg');
+      var loader = document.getElementById('inAppViewerLoader');
+      var dlBtn = document.getElementById('inAppDownloadBtn');
+      var waBtn = document.getElementById('inAppWaShareBtn');
+      var newTabBtn = document.getElementById('inAppOpenNewTabBtn');
+
+      if (!modal) return;
+
+      if (titleEl) titleEl.textContent = title;
+      if (badgeEl) {
+        badgeEl.textContent = (type === 'game' ? '🎮 HTML5 Game' : (type === 'image' ? '🖼️ Gambar Preview' : '📄 PDF Lembar Kerja'));
+      }
+
+      // Reset loading state
+      if (loader) {
+        loader.classList.remove('opacity-0', 'pointer-events-none');
+      }
+
+      var finalPreviewUrl = previewUrl || (fileId ? ('https://drive.google.com/file/d/' + fileId + '/preview') : '#');
+      var finalDlUrl = downloadUrl || finalPreviewUrl;
+
+      currentInAppViewerPreviewUrl = finalPreviewUrl;
+      currentInAppViewerDownloadUrl = finalDlUrl;
+
+      if (dlBtn) dlBtn.href = finalDlUrl;
+      if (newTabBtn) newTabBtn.href = finalPreviewUrl;
+
+      // Update WhatsApp link with document title
+      var currentWa = (window.appState && window.appState.config && window.appState.config.waAdmin) ? window.appState.config.waAdmin.replace(/[^0-9]/g, '') : '6281331661370';
+      var msg = encodeURIComponent('Halo Admin, saya sedang melihat lembar kerja *' + title + '*. Mohon info cara pemesanan & lisensi lengkapnya.');
+      if (waBtn) waBtn.href = 'https://wa.me/' + currentWa + '?text=' + msg;
+
+      // Tampilkan iframe dokumen atau gambar
+      if (type === 'image' && fileId) {
+        if (iframe) iframe.classList.add('hidden');
+        if (imgBox) imgBox.classList.remove('hidden');
+        if (imgEl) {
+          imgEl.src = 'https://lh3.googleusercontent.com/d/' + fileId + '=s1000';
+          imgEl.onload = function() {
+            if (loader) loader.classList.add('opacity-0', 'pointer-events-none');
+          };
+        }
+      } else {
+        if (imgBox) imgBox.classList.add('hidden');
+        if (iframe) {
+          iframe.classList.remove('hidden');
+          iframe.src = finalPreviewUrl;
+        }
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    };
+
+    window.closeInAppViewer = function() {
+      var modal = document.getElementById('inAppViewerModal');
+      var iframe = document.getElementById('inAppViewerIframe');
+      if (iframe) iframe.src = 'about:blank';
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    window.handleInAppViewerLoaded = function() {
+      var loader = document.getElementById('inAppViewerLoader');
+      if (loader) {
+        loader.classList.add('opacity-0', 'pointer-events-none');
+      }
+    };
+
+    window.printInAppDoc = function() {
+      var iframe = document.getElementById('inAppViewerIframe');
+      if (iframe && iframe.src && iframe.src !== 'about:blank') {
+        try {
+          iframe.contentWindow.focus();
+          iframe.contentWindow.print();
+        } catch(e) {
+          window.open(currentInAppViewerPreviewUrl, '_blank');
+        }
+      }
+    };
+
+    window.copyInAppViewerLink = function() {
+      if (!currentInAppViewerPreviewUrl || currentInAppViewerPreviewUrl === '#') return;
+      navigator.clipboard.writeText(currentInAppViewerPreviewUrl).then(function() {
+        window.showToast('Tautan lembar kerja disalin!', 'success');
+      }).catch(function() {
+        window.showToast('Tautan berhasil disalin!', 'success');
+      });
     };
 
     /**
@@ -1541,6 +2257,31 @@
             try {
               memberPayload.prods = JSON.parse(decodeURIComponent(rawProds));
             } catch(e3) {}
+          }
+        }
+
+        // Opsi 3: Deteksi Slug WhatsApp / Parameter Reseller (seperti /081331661370 atau ?ref=081331661370)
+        if (!memberPayload) {
+          var refParam = params.get('ref') || params.get('wa') || params.get('reseller');
+          var pathSlug = window.location.pathname.replace(/^\/+|\/+$/g, '');
+          var detectedPhone = '';
+
+          if (refParam && /^[0-9+]{9,16}$/.test(refParam.replace(/[^0-9+]/g, ''))) {
+            detectedPhone = refParam.replace(/[^0-9]/g, '');
+          } else if (/^(08|628|\+628)[0-9]{8,13}$/.test(pathSlug)) {
+            detectedPhone = pathSlug.replace(/[^0-9]/g, '');
+          }
+
+          if (detectedPhone) {
+            if (detectedPhone.indexOf('08') === 0) detectedPhone = '62' + detectedPhone.slice(1);
+            memberPayload = {
+              toko: 'Mitra Reseller Resmi',
+              wa: detectedPhone,
+              sub: 'Layanan Pembelian Produk Digital Resmi • WhatsApp: +' + detectedPhone,
+              bank: '',
+              pesan: 'Halo Kak, saya ingin konfirmasi akses produk digital dari tokomu.',
+              prods: []
+            };
           }
         }
 
@@ -2309,14 +3050,25 @@
                   >
                     Detail Info
                   </button>
-                  <a 
-                    href="${item.url}" 
-                    target="_blank" 
-                    class="w-full py-2 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold text-center shadow transition flex items-center justify-center gap-1"
-                  >
-                    <span>Buka Akses</span>
-                    <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-                  </a>
+                  ${(item.id === 'PRD-05' || item.id === 'PRD-09' || item.category === 'Worksheet Anak') ? `
+                    <button 
+                      onclick="window.navigateTo('view-berkas')" 
+                      class="w-full py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold text-center shadow transition flex items-center justify-center gap-1"
+                      title="Buka dan Eksplor lembar kerja langsung di dalam aplikasi"
+                    >
+                      <span>Lihat Isi (In-App)</span>
+                      <span class="material-symbols-outlined text-[14px]">visibility</span>
+                    </button>
+                  ` : `
+                    <a 
+                      href="${item.url}" 
+                      target="_blank" 
+                      class="w-full py-2 px-3 rounded-xl bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold text-center shadow transition flex items-center justify-center gap-1"
+                    >
+                      <span>Buka Akses</span>
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                  `}
                 </div>
               </div>
             </div>
