@@ -273,6 +273,10 @@
         <button onclick="window.navigateTo('view-lisensi')" data-target="view-lisensi" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap">
           Lisensi & Panduan Reseller
         </button>
+        <button onclick="window.navigateTo('view-member-store')" data-target="view-member-store" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-secondary hover:text-white transition whitespace-nowrap flex items-center gap-1.5 border border-secondary/40 bg-secondary/10">
+          <span class="material-symbols-outlined text-[15px]">storefront</span>
+          <span>Buat Toko Reseller (Instan)</span>
+        </button>
         <button onclick="window.navigateTo('view-admin')" data-target="view-admin" class="nav-tab px-4 py-1.5 rounded-full text-xs font-bold text-on-surface-variant hover:text-white transition whitespace-nowrap">
           Admin Manager (Sheet Sync)
         </button>
@@ -282,6 +286,28 @@
 
   <!-- ================= MAIN CONTAINER ================= -->
   <main class="w-full pt-32 max-w-7xl mx-auto px-4 sm:px-6 min-h-screen pb-24 flex-1">
+
+    <!-- ================= MEMBER STORE WELCOME BANNER (Aktif saat dikunjungi via Link Member) ================= -->
+    <div id="memberStoreBanner" class="hidden w-full mb-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-950 border-2 border-secondary/60 text-white shadow-xl flex-col sm:flex-row sm:items-center justify-between gap-3 animate-fade-in">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-secondary/20 border border-secondary/40 flex items-center justify-center text-secondary shrink-0">
+          <span class="material-symbols-outlined text-[24px]">verified</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-secondary text-header-pine">Toko Resmi Mitra Reseller</span>
+            <span id="memberBannerStoreName" class="text-sm font-bold text-white">Nama Toko Mitra</span>
+          </div>
+          <p id="memberBannerSub" class="text-xs text-on-surface-variant mt-0.5">Siap melayani pemesanan produk digital resmi & legal.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <a id="memberBannerWaBtn" href="#" target="_blank" class="px-3.5 py-1.5 rounded-full bg-primary-container hover:bg-disc-emerald text-white text-xs font-bold transition flex items-center gap-1.5 shadow">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>Chat WhatsApp Penjual</span>
+        </a>
+      </div>
+    </div>
 
     <!-- ================= VIEW 1: KATALOG PRODUK (HUB) ================= -->
     <section id="view-katalog" class="flex flex-col w-full">
@@ -753,6 +779,311 @@
       </div>
     </section>
 
+    <!-- ================= VIEW 4: BUAT TOKO RESELLER (INSTAN & TANPA CODING) ================= -->
+    <section id="view-member-store" class="hidden flex-col w-full pb-16">
+      
+      <!-- Top Title & Value Proposition -->
+      <div class="mb-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-surface-container-high/90 to-surface-container/90 border-2 border-border-gold/50 shadow-2xl backdrop-blur-md relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-secondary text-[11px] font-bold uppercase tracking-wider mb-3">
+              <span class="material-symbols-outlined text-[15px]">verified</span>
+              <span>Fitur Khusus Member / Pembeli Lisensi</span>
+            </div>
+            <h2 class="font-headline text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Bikin Toko Digital Sendiri & Tambah Produk Instan
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
+              Ubah nama toko, nomor WhatsApp, rekening pembayaran, dan masukkan produk digital Anda sendiri tanpa perlu sewa hosting atau coding. Dapatkan 1 Link Toko Instan yang siap Anda bagikan ke calon pembeli—100% uang langsung masuk ke rekening Anda!
+            </p>
+          </div>
+          <div class="flex flex-wrap md:flex-col gap-2 shrink-0 text-[11px]">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-emerald-300">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              <span>100% Bebas Biaya Server</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-secondary">
+              <span class="material-symbols-outlined text-[16px]">lock</span>
+              <span>Toko Induk 100% Aman Terpisah</span>
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-card-surface/10 border border-white/10 text-cyan-300">
+              <span class="material-symbols-outlined text-[16px]">bolt</span>
+              <span>Siap Jualan dalam 2 Menit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main 2-Column Workstation Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left Column: Identitas Toko Reseller -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="bg-card-surface text-text-on-light-primary rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-200">
+            <div class="flex items-center gap-3 pb-4 mb-5 border-b border-slate-100">
+              <div class="w-10 h-10 rounded-xl bg-tag-mint-bg text-tag-mint-text flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[22px]">storefront</span>
+              </div>
+              <div>
+                <h3 class="font-headline text-base font-bold text-slate-800">Langkah 1: Identitas Toko Anda</h3>
+                <p class="text-[11px] text-text-on-light-muted">Informasi ini akan muncul di web calon pembeli Anda.</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs font-semibold">
+              <div>
+                <label class="block text-slate-700 mb-1">Nama Toko Digital Anda <span class="text-rose-500">*</span></label>
+                <input 
+                  type="text" 
+                  id="mbrStoreName" 
+                  placeholder="Contoh: Berkah Digital Creative" 
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary-container focus:outline-none transition"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Slogan / Subtitle Toko</label>
+                <input 
+                  type="text" 
+                  id="mbrStoreSub" 
+                  placeholder="Contoh: Pusat Aset Desain & Template Siap Pakai" 
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary-container focus:outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Nomor WhatsApp Jualan Anda <span class="text-rose-500">*</span></label>
+                <input 
+                  type="tel" 
+                  id="mbrStoreWa" 
+                  placeholder="Contoh: 081234567890 atau 628123456789" 
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary-container focus:outline-none transition font-mono"
+                  required
+                />
+                <p class="text-[10px] text-text-on-light-muted mt-1">Pembeli yang klik tombol WhatsApp akan langsung chat ke nomor ini.</p>
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Informasi Rekening Pembayaran (Opsional)</label>
+                <input 
+                  type="text" 
+                  id="mbrStoreBank" 
+                  placeholder="Contoh: BCA 123456789 a/n Nama Anda / DANA" 
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary-container focus:outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Pesan Pembuka WhatsApp Default</label>
+                <textarea 
+                  id="mbrStoreMsg" 
+                  rows="2" 
+                  placeholder="Halo kak, saya ingin beli produk digital dari katalog tokomu..." 
+                  class="w-full px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-primary-container focus:outline-none transition resize-none"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Tambah Produk Digital Instan -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="bg-card-surface text-text-on-light-primary rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-200">
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">add_box</span>
+                </div>
+                <div>
+                  <h3 class="font-headline text-base font-bold text-slate-800">Langkah 2: Tambah Produk Sendiri (Instan)</h3>
+                  <p class="text-[11px] text-text-on-light-muted">Masukkan produk digital buatan Anda atau koleksi khusus Anda.</p>
+                </div>
+              </div>
+              <span id="mbrProductCountBadge" class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-bold">
+                0 Produk Ditambahkan
+              </span>
+            </div>
+
+            <!-- Form Tambah Produk Baru -->
+            <form onsubmit="window.handleAddMemberProduct(event)" class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/80 mb-5 space-y-3 text-xs font-semibold">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-slate-700 mb-1">Judul Produk <span class="text-rose-500">*</span></label>
+                  <input 
+                    type="text" 
+                    id="newMbrProdTitle" 
+                    placeholder="Contoh: E-Book Mahir Canva 2026" 
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-slate-700 mb-1">Kategori Produk</label>
+                  <select id="newMbrProdCat" class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none">
+                    <option value="E-Book">E-Book</option>
+                    <option value="Template Toko">Template Toko</option>
+                    <option value="Desain & Canva">Desain & Canva</option>
+                    <option value="Worksheet Anak">Worksheet Anak</option>
+                    <option value="Games Edukasi">Games Edukasi</option>
+                    <option value="Aplikasi & Coding">Aplikasi & Coding</option>
+                    <option value="Mega Bundle">Mega Bundle</option>
+                    <option value="Produk Eksklusif">Produk Eksklusif</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-slate-700 mb-1">Link Akses / Download <span class="text-rose-500">*</span></label>
+                  <input 
+                    type="url" 
+                    id="newMbrProdUrl" 
+                    placeholder="https://drive.google.com/..." 
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none font-mono text-[11px]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-slate-700 mb-1">Ukuran / Keterangan Akses</label>
+                  <input 
+                    type="text" 
+                    id="newMbrProdSize" 
+                    placeholder="Contoh: 150 MB PDF / Akses Canva" 
+                    class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Link Gambar / Cover (Opsional - Rasio 16:9)</label>
+                <input 
+                  type="url" 
+                  id="newMbrProdImg" 
+                  placeholder="https://...link gambar jpg/png (kosongkan jika ingin cover 3D otomatis)" 
+                  class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none font-mono text-[11px]"
+                />
+              </div>
+
+              <div>
+                <label class="block text-slate-700 mb-1">Deskripsi Singkat Produk</label>
+                <input 
+                  type="text" 
+                  id="newMbrProdDesc" 
+                  placeholder="Contoh: Panduan langkah demi langkah membuat konten visual berdaya jual tinggi." 
+                  class="w-full px-3 py-2 rounded-lg border border-slate-200 bg-white focus:border-primary-container focus:outline-none"
+                />
+              </div>
+
+              <div class="pt-1 flex justify-end">
+                <button 
+                  type="submit" 
+                  class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold transition flex items-center gap-1.5 shadow"
+                >
+                  <span class="material-symbols-outlined text-[16px]">add_circle</span>
+                  <span>+ Tambahkan Produk Ini ke Daftar</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Daftar Produk Tambahan yang Sudah Dimasukkan -->
+            <div>
+              <h4 class="text-xs font-bold text-slate-700 mb-2">Daftar Produk Tambahan Anda:</h4>
+              <div id="mbrProductsListContainer" class="space-y-2 max-h-60 overflow-y-auto pr-1">
+                <!-- Rendered dynamically -->
+                <div class="text-center py-6 px-4 bg-slate-50 rounded-xl border border-dashed border-slate-300 text-slate-400 text-xs">
+                  Belum ada produk tambahan. Produk katalog bawaan tetap aktif 100%.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Step 3: Generator Link Toko Saya -->
+      <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-card-surface text-text-on-light-primary border-2 border-secondary shadow-2xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-200">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tag-mint-bg text-tag-mint-text text-[11px] font-bold mb-2">
+              <span class="material-symbols-outlined text-[15px]">auto_awesome</span>
+              <span>Langkah Terakhir</span>
+            </div>
+            <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-800">
+              Langkah 3: Dapatkan Link Toko Digital Anda
+            </h3>
+            <p class="text-xs text-text-on-light-muted mt-1">
+              Klik tombol di bawah untuk menghasilkan URL toko Anda yang sudah memuat nama toko, nomor WhatsApp, dan produk tambahan Anda.
+            </p>
+          </div>
+          <button 
+            type="button" 
+            onclick="window.handleGenerateMemberLink()" 
+            class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-secondary via-emerald-400 to-teal-400 hover:brightness-110 text-header-pine font-extrabold text-sm shadow-[0_10px_25px_rgba(250,204,21,0.4)] transition-all flex items-center justify-center gap-2 shrink-0 active:scale-95"
+          >
+            <span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+            <span>Buat Link Toko Saya Sekarang</span>
+          </button>
+        </div>
+
+        <!-- Result Box (Muncul Setelah Klik Generate) -->
+        <div id="mbrResultBox" class="hidden mt-6 pt-2 space-y-4">
+          <div class="p-4 rounded-2xl bg-slate-900 text-white border border-secondary/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner">
+            <div class="flex-1 truncate">
+              <span class="text-[10px] font-mono uppercase text-secondary tracking-widest block mb-1">🔗 Link Toko Digital Anda Siap Pakai:</span>
+              <input 
+                type="text" 
+                id="mbrGeneratedUrlInput" 
+                readonly 
+                onclick="this.select()" 
+                class="w-full bg-transparent text-emerald-300 font-mono text-xs sm:text-sm focus:outline-none select-all truncate" 
+                value=""
+              />
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button 
+                type="button" 
+                onclick="window.copyMemberStoreLink()" 
+                class="px-4 py-2 rounded-xl bg-secondary text-header-pine font-bold text-xs hover:bg-yellow-400 transition flex items-center gap-1.5 shadow"
+              >
+                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                <span>Salin Link</span>
+              </button>
+              <a 
+                id="mbrTestStoreBtn" 
+                href="#" 
+                target="_blank" 
+                class="px-4 py-2 rounded-xl bg-slate-800 text-white font-bold text-xs hover:bg-slate-700 transition flex items-center gap-1.5 border border-white/20"
+              >
+                <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                <span>Buka Toko</span>
+              </a>
+              <button 
+                type="button" 
+                onclick="window.shareMemberStoreLinkWA()" 
+                class="px-4 py-2 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition flex items-center gap-1.5 shadow"
+                title="Bagikan ke WhatsApp"
+              >
+                <span class="material-symbols-outlined text-[16px]">chat</span>
+                <span class="hidden sm:inline">Bagikan ke WA</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-[18px] text-amber-600 shrink-0 mt-0.5">lightbulb</span>
+            <div>
+              <strong>Tips Berjualan:</strong> Pasang link toko Anda di bio Instagram, TikTok, status WhatsApp, atau kirim langsung ke calon pembeli Anda. Siapa pun yang membuka link ini akan melihat nama toko Anda, nomor WhatsApp Anda, dan produk tambahan Anda secara otomatis!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
   <!-- ================= PRODUCT DETAIL MODAL DIALOG ================= -->
@@ -1107,6 +1438,12 @@
       var savedTheme = localStorage.getItem('reseller_vault_theme') || 'dark';
       window.setTheme(savedTheme);
 
+      // Cek apakah halaman dibuka dengan Link Toko Member (URL Params)
+      window.checkMemberStoreParams();
+
+      // Inisialisasi Form & Draft Toko Member
+      window.initMemberStore();
+
       window.applyConfigToUI();
       window.renderProductCatalog();
       window.renderAdminTable();
@@ -1139,7 +1476,7 @@
     window.navigateTo = function(targetSectionId) {
       window.appState.currentView = targetSectionId;
 
-      var sections = ['view-katalog', 'view-lisensi', 'view-admin'];
+      var sections = ['view-katalog', 'view-lisensi', 'view-admin', 'view-member-store'];
       sections.forEach(function(sId) {
         var el = document.getElementById(sId);
         if (el) {
@@ -1164,6 +1501,353 @@
       });
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    /**
+     * Memeriksa dan Menerapkan Parameter Toko Member dari URL
+     */
+    window.checkMemberStoreParams = function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var memberPayload = null;
+
+        // Opsi 1: Dari payload terkompresi '?m=...'
+        var mParam = params.get('m');
+        if (mParam) {
+          try {
+            var decodedStr = decodeURIComponent(atob(decodeURIComponent(mParam)));
+            memberPayload = JSON.parse(decodedStr);
+          } catch(e1) {
+            try {
+              memberPayload = JSON.parse(decodeURIComponent(mParam));
+            } catch(e2) {
+              console.log('Error decode member param', e2);
+            }
+          }
+        }
+
+        // Opsi 2: Dari query string langsung (?toko=...&wa=...&sub=...&bank=...)
+        if (!memberPayload && params.get('toko')) {
+          memberPayload = {
+            toko: params.get('toko'),
+            wa: params.get('wa') || '',
+            sub: params.get('sub') || params.get('tagline') || '',
+            bank: params.get('bank') || '',
+            pesan: params.get('pesan') || '',
+            prods: []
+          };
+          var rawProds = params.get('m_prods') || params.get('p');
+          if (rawProds) {
+            try {
+              memberPayload.prods = JSON.parse(decodeURIComponent(rawProds));
+            } catch(e3) {}
+          }
+        }
+
+        // Jika terdeteksi link toko member:
+        if (memberPayload && memberPayload.toko) {
+          window.appState.isMemberStoreActive = true;
+          window.appState.activeMemberInfo = memberPayload;
+
+          // Override Config Toko secara dinamis (tanpa merusak database master)
+          window.appState.config.headerJudul = memberPayload.toko;
+          if (memberPayload.sub) {
+            window.appState.config.headerSub = memberPayload.sub;
+          }
+          if (memberPayload.wa) {
+            window.appState.config.waAdmin = memberPayload.wa.replace(/[^0-9]/g, '');
+            window.appState.config.pesanWA = memberPayload.pesan || ('Halo ' + memberPayload.toko + ', saya ingin pesan produk digital dari tokomu.');
+          }
+
+          // Update banner sambutan toko member
+          var banner = document.getElementById('memberStoreBanner');
+          var nameEl = document.getElementById('memberBannerStoreName');
+          var subEl = document.getElementById('memberBannerSub');
+          var waBtn = document.getElementById('memberBannerWaBtn');
+
+          if (banner) {
+            banner.classList.remove('hidden');
+            banner.classList.add('flex');
+          }
+          if (nameEl) nameEl.textContent = memberPayload.toko;
+          if (subEl) subEl.textContent = memberPayload.sub || ('Toko Mitra Resmi • Hubungi WhatsApp: +' + (window.appState.config.waAdmin || ''));
+          if (waBtn && memberPayload.wa) {
+            var cleanWa = memberPayload.wa.replace(/[^0-9]/g, '');
+            var msg = encodeURIComponent(memberPayload.pesan || ('Halo ' + memberPayload.toko + ', saya tertarik dengan produk digital Anda.'));
+            waBtn.href = 'https://wa.me/' + cleanWa + '?text=' + msg;
+          }
+
+          // Gabungkan Produk Tambahan Member ke dalam Katalog
+          if (memberPayload.prods && Array.isArray(memberPayload.prods) && memberPayload.prods.length > 0) {
+            var formattedMemberProds = memberPayload.prods.map(function(mp, idx) {
+              return {
+                id: 'MBR-' + (idx + 1),
+                order: idx,
+                title: mp.title || mp.t || 'Produk Tambahan Mitra',
+                category: mp.category || mp.c || 'Produk Eksklusif',
+                icon: 'stars',
+                color: '#F59E0B',
+                url: mp.url || mp.u || '#',
+                desc: mp.desc || mp.d || 'Produk digital pilihan dari mitra reseller kami.',
+                size: mp.size || mp.s || 'Akses Langsung',
+                active: true,
+                license: 'Produk Mitra',
+                imageUrl: mp.imageUrl || mp.img || '',
+                isMember: true
+              };
+            });
+
+            // Taruh produk member di posisi paling atas etalase!
+            window.appState.products = formattedMemberProds.concat(window.appState.products);
+          }
+        }
+      } catch(err) {
+        console.error('Error in checkMemberStoreParams:', err);
+      }
+    };
+
+    /**
+     * State & Logika Generator Toko Reseller
+     */
+    window.memberStoreDraft = {
+      storeName: '',
+      storeSub: '',
+      storeWa: '',
+      storeBank: '',
+      storeMsg: '',
+      products: []
+    };
+
+    window.initMemberStore = function() {
+      try {
+        var savedDraft = localStorage.getItem('reseller_member_draft');
+        if (savedDraft) {
+          window.memberStoreDraft = Object.assign({}, window.memberStoreDraft, JSON.parse(savedDraft));
+          var elName = document.getElementById('mbrStoreName');
+          var elSub = document.getElementById('mbrStoreSub');
+          var elWa = document.getElementById('mbrStoreWa');
+          var elBank = document.getElementById('mbrStoreBank');
+          var elMsg = document.getElementById('mbrStoreMsg');
+
+          if (elName && window.memberStoreDraft.storeName) elName.value = window.memberStoreDraft.storeName;
+          if (elSub && window.memberStoreDraft.storeSub) elSub.value = window.memberStoreDraft.storeSub;
+          if (elWa && window.memberStoreDraft.storeWa) elWa.value = window.memberStoreDraft.storeWa;
+          if (elBank && window.memberStoreDraft.storeBank) elBank.value = window.memberStoreDraft.storeBank;
+          if (elMsg && window.memberStoreDraft.storeMsg) elMsg.value = window.memberStoreDraft.storeMsg;
+        }
+        window.renderMemberProductsList();
+      } catch(e) {}
+    };
+
+    window.saveMemberDraft = function() {
+      try {
+        var elName = document.getElementById('mbrStoreName');
+        var elSub = document.getElementById('mbrStoreSub');
+        var elWa = document.getElementById('mbrStoreWa');
+        var elBank = document.getElementById('mbrStoreBank');
+        var elMsg = document.getElementById('mbrStoreMsg');
+
+        if (elName) window.memberStoreDraft.storeName = elName.value.trim();
+        if (elSub) window.memberStoreDraft.storeSub = elSub.value.trim();
+        if (elWa) window.memberStoreDraft.storeWa = elWa.value.replace(/[^0-9]/g, '');
+        if (elBank) window.memberStoreDraft.storeBank = elBank.value.trim();
+        if (elMsg) window.memberStoreDraft.storeMsg = elMsg.value.trim();
+
+        localStorage.setItem('reseller_member_draft', JSON.stringify(window.memberStoreDraft));
+      } catch(e) {}
+    };
+
+    window.handleAddMemberProduct = function(event) {
+      event.preventDefault();
+      var title = document.getElementById('newMbrProdTitle').value.trim();
+      var cat = document.getElementById('newMbrProdCat').value;
+      var url = document.getElementById('newMbrProdUrl').value.trim();
+      var size = document.getElementById('newMbrProdSize').value.trim();
+      var img = document.getElementById('newMbrProdImg').value.trim();
+      var desc = document.getElementById('newMbrProdDesc').value.trim();
+
+      if (!title || !url) {
+        window.showToast('Judul dan Link Akses wajib diisi!', 'error');
+        return;
+      }
+
+      var newProd = {
+        title: title,
+        category: cat || 'Produk Eksklusif',
+        url: url,
+        size: size || 'Akses Langsung',
+        imageUrl: img || '',
+        desc: desc || 'Produk eksklusif dari toko reseller kami.'
+      };
+
+      if (!window.memberStoreDraft.products) window.memberStoreDraft.products = [];
+      window.memberStoreDraft.products.push(newProd);
+      window.saveMemberDraft();
+      window.renderMemberProductsList();
+
+      // Reset form
+      document.getElementById('newMbrProdTitle').value = '';
+      document.getElementById('newMbrProdUrl').value = '';
+      document.getElementById('newMbrProdSize').value = '';
+      document.getElementById('newMbrProdImg').value = '';
+      document.getElementById('newMbrProdDesc').value = '';
+
+      window.showToast('Produk berhasil ditambahkan ke daftar!', 'success');
+    };
+
+    window.removeMemberProduct = function(index) {
+      if (window.memberStoreDraft.products && window.memberStoreDraft.products[index]) {
+        window.memberStoreDraft.products.splice(index, 1);
+        window.saveMemberDraft();
+        window.renderMemberProductsList();
+        window.showToast('Produk dihapus dari daftar.', 'info');
+      }
+    };
+
+    window.renderMemberProductsList = function() {
+      var container = document.getElementById('mbrProductsListContainer');
+      var badge = document.getElementById('mbrProductCountBadge');
+      if (!container) return;
+
+      var prods = window.memberStoreDraft.products || [];
+      if (badge) badge.textContent = prods.length + ' Produk Ditambahkan';
+
+      if (prods.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-6 px-4 bg-slate-50 rounded-xl border border-dashed border-slate-300 text-slate-400 text-xs">
+            Belum ada produk tambahan. Produk katalog bawaan tetap aktif 100%.
+          </div>
+        `;
+        return;
+      }
+
+      var html = '';
+      for (var i = 0; i < prods.length; i++) {
+        var p = prods[i];
+        var safeTitle = String(p.title).replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        var safeCat = String(p.category || 'Produk Mitra').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        var safeSize = String(p.size || 'Akses Langsung').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        
+        html += `
+          <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center justify-between gap-3 shadow-xs">
+            <div class="flex items-center gap-2.5 truncate">
+              <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold text-xs">
+                #${i + 1}
+              </span>
+              <div class="truncate">
+                <div class="font-bold text-xs text-slate-800 truncate">${safeTitle}</div>
+                <div class="text-[10px] text-slate-500 flex items-center gap-2 mt-0.5">
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 font-semibold">${safeCat}</span>
+                  <span>•</span>
+                  <span>${safeSize}</span>
+                </div>
+              </div>
+            </div>
+            <button 
+              type="button" 
+              onclick="window.removeMemberProduct(${i})" 
+              class="w-7 h-7 rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-100 flex items-center justify-center shrink-0 transition"
+              title="Hapus Produk Ini"
+            >
+              <span class="material-symbols-outlined text-[16px]">delete</span>
+            </button>
+          </div>
+        `;
+      }
+      container.innerHTML = html;
+    };
+
+    window.handleGenerateMemberLink = function() {
+      var storeName = document.getElementById('mbrStoreName').value.trim();
+      var storeWa = document.getElementById('mbrStoreWa').value.replace(/[^0-9]/g, '');
+
+      if (!storeName) {
+        window.showToast('Silakan isi Nama Toko Anda terlebih dahulu!', 'error');
+        document.getElementById('mbrStoreName').focus();
+        return;
+      }
+      if (!storeWa) {
+        window.showToast('Silakan isi Nomor WhatsApp Jualan Anda!', 'error');
+        document.getElementById('mbrStoreWa').focus();
+        return;
+      }
+
+      window.saveMemberDraft();
+
+      var storeSub = document.getElementById('mbrStoreSub').value.trim();
+      var storeBank = document.getElementById('mbrStoreBank').value.trim();
+      var storeMsg = document.getElementById('mbrStoreMsg').value.trim();
+      var prods = window.memberStoreDraft.products || [];
+
+      // Minimalisir struktur produk untuk efisiensi URL
+      var compactProds = prods.map(function(p) {
+        return {
+          t: p.title,
+          c: p.category,
+          u: p.url,
+          s: p.size,
+          d: p.desc,
+          img: p.imageUrl
+        };
+      });
+
+      var payload = {
+        toko: storeName,
+        wa: storeWa,
+        sub: storeSub,
+        bank: storeBank,
+        pesan: storeMsg,
+        prods: compactProds
+      };
+
+      // Base URL aplikasi
+      var baseUrl = 'https://creatorhub-landing-page.vercel.app/';
+      if (window.location.origin && window.location.origin !== 'null' && window.location.origin.indexOf('http') === 0) {
+        baseUrl = window.location.origin + window.location.pathname;
+      }
+
+      // Encode payload secara aman (Base64 UTF-8)
+      var jsonStr = JSON.stringify(payload);
+      var encodedBase64 = encodeURIComponent(btoa(encodeURIComponent(jsonStr)));
+      
+      var generatedUrl = baseUrl + '?m=' + encodedBase64;
+
+      // Update UI Result Box
+      var box = document.getElementById('mbrResultBox');
+      var input = document.getElementById('mbrGeneratedUrlInput');
+      var testBtn = document.getElementById('mbrTestStoreBtn');
+
+      if (input) input.value = generatedUrl;
+      if (testBtn) testBtn.href = generatedUrl;
+      if (box) {
+        box.classList.remove('hidden');
+        box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      window.showToast('Link Toko berhasil dibuat! Silakan salin & bagikan.', 'success');
+    };
+
+    window.copyMemberStoreLink = function() {
+      var input = document.getElementById('mbrGeneratedUrlInput');
+      if (!input || !input.value) return;
+
+      navigator.clipboard.writeText(input.value).then(function() {
+        window.showToast('Link Toko berhasil disalin ke clipboard!', 'success');
+      }).catch(function() {
+        input.select();
+        document.execCommand('copy');
+        window.showToast('Link Toko berhasil disalin!', 'success');
+      });
+    };
+
+    window.shareMemberStoreLinkWA = function() {
+      var input = document.getElementById('mbrGeneratedUrlInput');
+      var storeName = document.getElementById('mbrStoreName').value.trim() || 'Toko Digital Kami';
+      if (!input || !input.value) return;
+
+      var text = 'Halo! Kunjungi katalog produk digital resmi kami di ' + storeName + ':\n\n' + input.value + '\n\nBisa langsung diakses & berlisensi komersial legal!';
+      var shareUrl = 'https://wa.me/?text=' + encodeURIComponent(text);
+      window.open(shareUrl, '_blank');
     };
 
     /**
@@ -1207,6 +1891,26 @@
     window.getPixarSvgById = function(id, title) {
       id = String(id || '');
       title = String(title || '').toLowerCase();
+
+      // 0. Produk Khusus Mitra Reseller (3D Golden Star & Vault Medal)
+      if (id.indexOf('MBR-') === 0 || id.indexOf('MBR') !== -1) {
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-full">
+            <defs>
+              <linearGradient id="bgMbr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e1b4b"/><stop offset="50%" stop-color="#312e81"/><stop offset="100%" stop-color="#d97706"/></linearGradient>
+              <linearGradient id="starGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#facc15"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bgMbr)"/>
+            <circle cx="160" cy="90" r="90" fill="#fde047" opacity="0.3" filter="blur(25px)"/>
+            <ellipse cx="160" cy="155" rx="90" ry="18" fill="#000000" opacity="0.45"/>
+            <!-- 3D Golden Reseller Vault Badge -->
+            <circle cx="160" cy="85" r="48" fill="url(#starGold)" stroke="#ffffff" stroke-width="4"/>
+            <polygon points="160,52 170,74 194,76 176,92 182,116 160,102 138,116 144,92 126,76 150,74" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.3))"/>
+            <!-- Sparkles -->
+            <polygon points="85,45 88,52 95,55 88,58 85,65 82,58 75,55 82,52" fill="#67e8f9"/>
+            <polygon points="235,45 238,52 245,55 238,58 235,65 232,58 225,55 232,52" fill="#f472b6"/>
+          </svg>`;
+      }
 
       // 1. Mega Bundling (Treasure Box Gold & Ruby)
       if (id === 'PRD-01' || title.indexOf('mega') !== -1) {
@@ -1576,9 +2280,9 @@
               <div>
                 <div class="flex items-center justify-between gap-2 mb-2">
                   <span class="text-[11px] font-bold uppercase tracking-wider text-text-on-light-muted">${item.category}</span>
-                  <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tag-mint-bg text-tag-mint-text text-[10px] font-bold">
-                    <span class="material-symbols-outlined text-[13px]">check_circle</span>
-                    <span>100% Hak Jual</span>
+                  <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full ${item.isMember ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-tag-mint-bg text-tag-mint-text'} text-[10px] font-bold">
+                    <span class="material-symbols-outlined text-[13px]">${item.isMember ? 'stars' : 'check_circle'}</span>
+                    <span>${item.isMember ? 'Produk Mitra' : (item.license || '100% Hak Jual')}</span>
                   </div>
                 </div>
 
@@ -1596,7 +2300,7 @@
                     <span class="material-symbols-outlined text-[14px] text-disc-emerald">link</span>
                     <span>${item.size || 'Instant Link'}</span>
                   </span>
-                  <span class="font-bold text-slate-700">PLR License</span>
+                  <span class="font-bold text-slate-700">${item.isMember ? 'Mitra Resmi' : 'PLR License'}</span>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   <button 
